@@ -79,11 +79,11 @@ const Index = () => {
             <div className="space-y-6">
               <div className="flex items-center space-x-4 text-muted-foreground">
                 <Mail className="h-5 w-5" />
-                <span>hello@estefaniabustamante.com</span>
+                <span>art@estefaniabustamante.com</span>
               </div>
               <div className="flex items-center space-x-4 text-muted-foreground">
                 <Phone className="h-5 w-5" />
-                <span>+1 (555) 123-4567</span>
+                <span>+1 (631) 353-8924</span>
               </div>
               <div className="flex items-center space-x-4 text-muted-foreground">
                 <MapPin className="h-5 w-5" />
