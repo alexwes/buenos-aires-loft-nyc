@@ -3,165 +3,204 @@ import Header from "@/components/Header";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 const Interiors = () => {
+  const githubBaseUrl = "https://raw.githubusercontent.com/alexwes/buenos-aires-loft-nyc/refs/heads/main/public/lovable-uploads";
+  
   const interiorProjects = [
     // Kitchen renovations
     {
       id: 1,
-      image: "/lovable-uploads/interior21.jpeg",
-      alt: "interior 21",
+      image: `${githubBaseUrl}/kitchen1.jpeg`,
+      alt: "kitchen 1",
       description: "KITCHEN, COMPLETE RENOVATION. UPPER EAST SIDE, NEW YORK.",
       category: "kitchen"
     },
     {
       id: 2,
-      image: "/lovable-uploads/interior19.jpeg",
-      alt: "interior 19",
+      image: `${githubBaseUrl}/kitchen2.jpeg`,
+      alt: "kitchen 2",
       description: "KITCHEN, COMPLETE RENOVATION. UPPER EAST SIDE, NEW YORK.",
       category: "kitchen"
     },
     {
       id: 3,
-      image: "/lovable-uploads/interior23.jpeg",
-      alt: "interior 23",
+      image: `${githubBaseUrl}/kitchen3.jpeg`,
+      alt: "kitchen 3",
       description: "KITCHEN, COMPLETE RENOVATION. UPPER EAST SIDE, NEW YORK.",
       category: "kitchen"
     },
     {
       id: 4,
-      image: "/lovable-uploads/interior20.jpeg",
-      alt: "interior 20",
+      image: `${githubBaseUrl}/kitchen4.jpeg`,
+      alt: "kitchen 4",
       description: "KITCHEN, COMPLETE RENOVATION. UPPER EAST SIDE, NEW YORK.",
+      category: "kitchen"
+    },
+    {
+      id: 5,
+      image: `${githubBaseUrl}/kitchen5.jpeg`,
+      alt: "kitchen 5",
+      description: "KITCHEN, COMPLETE RENOVATION. UPPER EAST SIDE, NEW YORK.",
+      category: "kitchen"
+    },
+    {
+      id: 6,
+      image: `${githubBaseUrl}/kitch-bef.jpg`,
+      alt: "kitchen before",
+      description: "KITCHEN BEFORE RENOVATION. UPPER EAST SIDE, NEW YORK.",
+      category: "kitchen"
+    },
+    {
+      id: 7,
+      image: `${githubBaseUrl}/kitch-aft.jpg`,
+      alt: "kitchen after",
+      description: "KITCHEN AFTER RENOVATION. UPPER EAST SIDE, NEW YORK.",
       category: "kitchen"
     },
     
     // Interior design & art consulting
     {
-      id: 5,
-      image: "/lovable-uploads/newinterior.jpg",
-      alt: "new interior",
-      description: "INTERIOR DESIGN, ART CONSULTING. UPPER EAST SIDE, NEW YORK.",
-      category: "interior-design"
-    },
-    {
-      id: 6,
-      image: "/lovable-uploads/bedroom2.jpg",
-      alt: "bedroom 2",
-      description: "INTERIOR DESIGN, ART CONSULTING. UPPER EAST SIDE, NEW YORK.",
-      category: "interior-design"
-    },
-    {
-      id: 7,
-      image: "/lovable-uploads/interior1.jpeg",
-      alt: "interior 1",
-      description: "INTERIOR DESIGN, ART CONSULTING. UPPER EAST SIDE, NEW YORK.",
-      category: "interior-design"
-    },
-    {
       id: 8,
-      image: "/lovable-uploads/interior3.jpeg",
-      alt: "interior 3",
+      image: `${githubBaseUrl}/1619living.jpeg`,
+      alt: "1619 living room",
       description: "INTERIOR DESIGN, ART CONSULTING. UPPER EAST SIDE, NEW YORK.",
       category: "interior-design"
     },
     {
       id: 9,
-      image: "/lovable-uploads/interior4.jpeg",
-      alt: "interior 4",
+      image: `${githubBaseUrl}/79thdining.jpeg`,
+      alt: "79th street dining",
       description: "INTERIOR DESIGN, ART CONSULTING. UPPER EAST SIDE, NEW YORK.",
       category: "interior-design"
     },
     {
       id: 10,
-      image: "/lovable-uploads/interior5.jpeg",
-      alt: "interior 5",
+      image: `${githubBaseUrl}/79thentrance.jpeg`,
+      alt: "79th street entrance",
       description: "INTERIOR DESIGN, ART CONSULTING. UPPER EAST SIDE, NEW YORK.",
       category: "interior-design"
     },
     {
       id: 11,
-      image: "/lovable-uploads/interior6.jpeg",
-      alt: "interior 6",
+      image: `${githubBaseUrl}/79thliving.jpeg`,
+      alt: "79th street living",
       description: "INTERIOR DESIGN, ART CONSULTING. UPPER EAST SIDE, NEW YORK.",
       category: "interior-design"
     },
     {
       id: 12,
-      image: "/lovable-uploads/interior7.jpeg",
-      alt: "interior 7",
+      image: `${githubBaseUrl}/79thst.jpeg`,
+      alt: "79th street",
       description: "INTERIOR DESIGN, ART CONSULTING. UPPER EAST SIDE, NEW YORK.",
       category: "interior-design"
     },
     {
       id: 13,
-      image: "/lovable-uploads/interior8.jpeg",
-      alt: "interior 8",
+      image: `${githubBaseUrl}/bedroom.jpg`,
+      alt: "bedroom",
       description: "INTERIOR DESIGN, ART CONSULTING. UPPER EAST SIDE, NEW YORK.",
       category: "interior-design"
     },
     {
       id: 14,
-      image: "/lovable-uploads/interior9.jpeg",
-      alt: "interior 9",
+      image: `${githubBaseUrl}/jon-dining.jpg`,
+      alt: "dining room",
       description: "INTERIOR DESIGN, ART CONSULTING. UPPER EAST SIDE, NEW YORK.",
       category: "interior-design"
     },
     {
       id: 15,
-      image: "/lovable-uploads/interior24.jpeg",
-      alt: "interior 24",
+      image: `${githubBaseUrl}/jon-LR.jpg`,
+      alt: "living room",
       description: "INTERIOR DESIGN, ART CONSULTING. UPPER EAST SIDE, NEW YORK.",
       category: "interior-design"
     },
     {
       id: 16,
-      image: "/lovable-uploads/interior10.jpeg",
-      alt: "interior 10",
+      image: `${githubBaseUrl}/livingroom.JPG`,
+      alt: "living room",
       description: "INTERIOR DESIGN, ART CONSULTING. UPPER EAST SIDE, NEW YORK.",
       category: "interior-design"
     },
     {
       id: 17,
-      image: "/lovable-uploads/interior11.jpeg",
-      alt: "interior 11",
-      description: "INTERIOR DESIGN, ART CONSULTING. SAG HARBOR, NEW YORK.",
+      image: `${githubBaseUrl}/crib.JPG`,
+      alt: "nursery",
+      description: "INTERIOR DESIGN, ART CONSULTING. UPPER EAST SIDE, NEW YORK.",
       category: "interior-design"
     },
     
     // Bathroom renovations
     {
       id: 18,
-      image: "/lovable-uploads/interior12.jpeg",
-      alt: "interior 12",
+      image: `${githubBaseUrl}/bath1.jpeg`,
+      alt: "bathroom 1",
       description: "BATHROOM, COMPLETE RENOVATION. UPPER EAST SIDE, NEW YORK.",
       category: "bathroom"
     },
     {
       id: 19,
-      image: "/lovable-uploads/interior15.jpeg",
-      alt: "interior 15",
+      image: `${githubBaseUrl}/bath2.jpeg`,
+      alt: "bathroom 2",
       description: "BATHROOM, COMPLETE RENOVATION. UPPER EAST SIDE, NEW YORK.",
       category: "bathroom"
     },
     {
       id: 20,
-      image: "/lovable-uploads/interior14.jpeg",
-      alt: "interior 14",
+      image: `${githubBaseUrl}/bath3.jpeg`,
+      alt: "bathroom 3",
       description: "BATHROOM, COMPLETE RENOVATION. UPPER EAST SIDE, NEW YORK.",
       category: "bathroom"
     },
     {
       id: 21,
-      image: "/lovable-uploads/interior13.jpeg",
-      alt: "interior 13",
+      image: `${githubBaseUrl}/bath4.jpeg`,
+      alt: "bathroom 4",
       description: "BATHROOM, COMPLETE RENOVATION. UPPER EAST SIDE, NEW YORK.",
       category: "bathroom"
     },
     {
       id: 22,
-      image: "/lovable-uploads/interior16.jpeg",
-      alt: "interior 16",
+      image: `${githubBaseUrl}/bath5.jpeg`,
+      alt: "bathroom 5",
       description: "BATHROOM, COMPLETE RENOVATION. UPPER EAST SIDE, NEW YORK.",
       category: "bathroom"
+    },
+    {
+      id: 23,
+      image: `${githubBaseUrl}/bath6.jpeg`,
+      alt: "bathroom 6",
+      description: "BATHROOM, COMPLETE RENOVATION. UPPER EAST SIDE, NEW YORK.",
+      category: "bathroom"
+    },
+    
+    // Before/After comparisons
+    {
+      id: 24,
+      image: `${githubBaseUrl}/before-after.jpg`,
+      alt: "before after comparison",
+      description: "COMPLETE RENOVATION BEFORE & AFTER. UPPER EAST SIDE, NEW YORK.",
+      category: "renovation"
+    },
+    {
+      id: 25,
+      image: `${githubBaseUrl}/before-after-1.jpg`,
+      alt: "before after comparison 1",
+      description: "COMPLETE RENOVATION BEFORE & AFTER. UPPER EAST SIDE, NEW YORK.",
+      category: "renovation"
+    },
+    {
+      id: 26,
+      image: `${githubBaseUrl}/reno-before.jpg`,
+      alt: "renovation before",
+      description: "RENOVATION BEFORE. UPPER EAST SIDE, NEW YORK.",
+      category: "renovation"
+    },
+    {
+      id: 27,
+      image: `${githubBaseUrl}/reno-after.jpg`,
+      alt: "renovation after",
+      description: "RENOVATION AFTER. UPPER EAST SIDE, NEW YORK.",
+      category: "renovation"
     }
   ];
 
@@ -171,14 +210,11 @@ const Interiors = () => {
       <Header />
 
       {/* Header */}
-      <section className="py-16 px-4 bg-accent">
+      <section className="py-8 px-4">
         <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-light text-foreground mb-4">
+          <h1 className="text-3xl md:text-4xl font-light text-foreground mb-2">
             Interiors
           </h1>
-          <p className="text-lg text-muted-foreground">
-            Sophisticated interior design and complete renovations across New York
-          </p>
         </div>
       </section>
 
