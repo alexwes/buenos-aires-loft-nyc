@@ -1,5 +1,6 @@
 import { Card } from "@/components/ui/card";
 import Header from "@/components/Header";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 const Interiors = () => {
   // Placeholder for interior design images - you can replace these with actual uploaded images
