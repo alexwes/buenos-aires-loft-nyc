@@ -2,27 +2,18 @@ import Header from "@/components/Header";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 const Artworks = () => {
+  const githubBaseUrl = "https://raw.githubusercontent.com/alexwes/buenos-aires-loft-nyc/refs/heads/main/public/lovable-uploads";
+  
   const artworks = [
-    { id: 1, image: "/lovable-uploads/artwork10.JPG", artist: "HILARY", alt: "artwork 1" },
-    { id: 2, image: "/lovable-uploads/artwork5.PNG", artist: "MARIA", alt: "artwork 5" },
-    { id: 3, image: "/lovable-uploads/artwork3 copy.jpg", artist: "LEON", alt: "artwork 6" },
-    { id: 4, image: "/placeholder.svg", artist: "HORACIO", alt: "artwork 7" },
-    { id: 5, image: "/lovable-uploads/bancalari.JPG", artist: "INES", alt: "bancalari" },
-    { id: 6, image: "/lovable-uploads/flowers.PNG", artist: "GABRIELA", alt: "flowers" },
-    { id: 7, image: "/placeholder.svg", artist: "REMY", alt: "artwork 4" },
-    { id: 8, image: "/lovable-uploads/artwork8.PNG", artist: "RACHEL", alt: "artwork 8" },
-    { id: 9, image: "/placeholder.svg", artist: "YEZICA", alt: "artwork 9" },
-    { id: 10, image: "/placeholder.svg", artist: "MILES", alt: "red painting" },
-    { id: 11, image: "/placeholder.svg", artist: "JANE", alt: "artwork 12" },
-    { id: 12, image: "/placeholder.svg", artist: "YEZICA", alt: "artwork 11" },
-    { id: 13, image: "/placeholder.svg", artist: "JESUS", alt: "artwork 13" },
-    { id: 14, image: "/lovable-uploads/artwork14.jpg", artist: "LEONHARD", alt: "artwork 14" },
-    { id: 15, image: "/placeholder.svg", artist: "ALEJANDRA", alt: "artwork 15" },
-    { id: 16, image: "/lovable-uploads/artwork17.jpg", artist: "GUSTAVO", alt: "artwork 17" },
-    { id: 17, image: "/placeholder.svg", artist: "GABRIELA", alt: "puma" },
-    { id: 18, image: "/lovable-uploads/artwork16.jpg", artist: "MILES", alt: "artwork 16" },
-    { id: 19, image: "/placeholder.svg", artist: "MARIA", alt: "MARIA" },
-    { id: 20, image: "/placeholder.svg", artist: "MARIA", alt: "MARIA" },
+    { id: 1, image: `${githubBaseUrl}/artwork10.JPG`, artist: "HILARY", alt: "artwork 10" },
+    { id: 2, image: `${githubBaseUrl}/artwork5.PNG`, artist: "MARIA", alt: "artwork 5" },
+    { id: 3, image: `${githubBaseUrl}/artwork3.jpg`, artist: "LEON", alt: "artwork 3" },
+    { id: 4, image: `${githubBaseUrl}/bancalari.JPG`, artist: "INES", alt: "bancalari" },
+    { id: 5, image: `${githubBaseUrl}/flowers.PNG`, artist: "GABRIELA", alt: "flowers" },
+    { id: 6, image: `${githubBaseUrl}/artwork8.PNG`, artist: "RACHEL", alt: "artwork 8" },
+    { id: 7, image: `${githubBaseUrl}/artwork14.jpg`, artist: "LEONHARD", alt: "artwork 14" },
+    { id: 8, image: `${githubBaseUrl}/artwork17.jpg`, artist: "GUSTAVO", alt: "artwork 17" },
+    { id: 9, image: `${githubBaseUrl}/artwork16.jpg`, artist: "MILES", alt: "artwork 16" },
   ];
 
   return (
@@ -31,12 +22,13 @@ const Artworks = () => {
       <Header />
 
       {/* Header */}
-      <section className="py-16 px-4 bg-accent">
+      <section className="py-8 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-light">
+          <h1 className="text-3xl md:text-4xl font-light text-foreground mb-2">
             Artworks
           </h1>
-          <p className="text-lg text-muted-foreground mt-4">
+          <p className="text-lg text-muted-foreground">
             Page under construction 🚧
           </p>
         </div>
