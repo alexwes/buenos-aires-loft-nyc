@@ -9,161 +9,198 @@ const Interiors = () => {
     // Kitchen renovations
     {
       id: 1,
-      image: `${githubBaseUrl}/interior21.jpeg`,
-      alt: "interior 21",
+      image: `${githubBaseUrl}/kitchen1.jpeg`,
+      alt: "kitchen 1",
       description: "KITCHEN, COMPLETE RENOVATION. UPPER EAST SIDE, NEW YORK.",
       category: "kitchen"
     },
     {
       id: 2,
-      image: `${githubBaseUrl}/interior19.jpeg`,
-      alt: "interior 19",
+      image: `${githubBaseUrl}/kitchen2.jpeg`,
+      alt: "kitchen 2",
       description: "KITCHEN, COMPLETE RENOVATION. UPPER EAST SIDE, NEW YORK.",
       category: "kitchen"
     },
     {
       id: 3,
-      image: `${githubBaseUrl}/interior23.jpeg`,
-      alt: "interior 23",
+      image: `${githubBaseUrl}/kitchen3.jpeg`,
+      alt: "kitchen 3",
       description: "KITCHEN, COMPLETE RENOVATION. UPPER EAST SIDE, NEW YORK.",
       category: "kitchen"
     },
     {
       id: 4,
-      image: `${githubBaseUrl}/interior20.jpeg`,
-      alt: "interior 20",
+      image: `${githubBaseUrl}/kitchen4.jpeg`,
+      alt: "kitchen 4",
       description: "KITCHEN, COMPLETE RENOVATION. UPPER EAST SIDE, NEW YORK.",
+      category: "kitchen"
+    },
+    {
+      id: 5,
+      image: `${githubBaseUrl}/kitchen5.jpeg`,
+      alt: "kitchen 5",
+      description: "KITCHEN, COMPLETE RENOVATION. UPPER EAST SIDE, NEW YORK.",
+      category: "kitchen"
+    },
+    {
+      id: 6,
+      image: `${githubBaseUrl}/kitch-bef.jpg`,
+      alt: "kitchen before",
+      description: "KITCHEN BEFORE RENOVATION. UPPER EAST SIDE, NEW YORK.",
+      category: "kitchen"
+    },
+    {
+      id: 7,
+      image: `${githubBaseUrl}/kitch-aft.jpg`,
+      alt: "kitchen after",
+      description: "KITCHEN AFTER RENOVATION. UPPER EAST SIDE, NEW YORK.",
       category: "kitchen"
     },
     
     // Interior design & art consulting
     {
-      id: 5,
-      image: `${githubBaseUrl}/newinterior.jpg`,
-      alt: "new interior",
-      description: "INTERIOR DESIGN, ART CONSULTING. UPPER EAST SIDE, NEW YORK.",
-      category: "interior-design"
-    },
-    {
-      id: 6,
-      image: `${githubBaseUrl}/bedroom2.jpg`,
-      alt: "bedroom 2",
-      description: "INTERIOR DESIGN, ART CONSULTING. UPPER EAST SIDE, NEW YORK.",
-      category: "interior-design"
-    },
-    {
-      id: 7,
-      image: `${githubBaseUrl}/interior1.jpeg`,
-      alt: "interior 1",
-      description: "INTERIOR DESIGN, ART CONSULTING. UPPER EAST SIDE, NEW YORK.",
-      category: "interior-design"
-    },
-    {
       id: 8,
-      image: `${githubBaseUrl}/interior3.jpeg`,
-      alt: "interior 3",
+      image: `${githubBaseUrl}/1619living.jpeg`,
+      alt: "1619 living room",
       description: "INTERIOR DESIGN, ART CONSULTING. UPPER EAST SIDE, NEW YORK.",
       category: "interior-design"
     },
     {
       id: 9,
-      image: `${githubBaseUrl}/interior4.jpeg`,
-      alt: "interior 4",
+      image: `${githubBaseUrl}/79thdining.jpeg`,
+      alt: "79th street dining",
       description: "INTERIOR DESIGN, ART CONSULTING. UPPER EAST SIDE, NEW YORK.",
       category: "interior-design"
     },
     {
       id: 10,
-      image: `${githubBaseUrl}/interior5.jpeg`,
-      alt: "interior 5",
+      image: `${githubBaseUrl}/79thentrance.jpeg`,
+      alt: "79th street entrance",
       description: "INTERIOR DESIGN, ART CONSULTING. UPPER EAST SIDE, NEW YORK.",
       category: "interior-design"
     },
     {
       id: 11,
-      image: `${githubBaseUrl}/interior6.jpeg`,
-      alt: "interior 6",
+      image: `${githubBaseUrl}/79thliving.jpeg`,
+      alt: "79th street living",
       description: "INTERIOR DESIGN, ART CONSULTING. UPPER EAST SIDE, NEW YORK.",
       category: "interior-design"
     },
     {
       id: 12,
-      image: `${githubBaseUrl}/interior7.jpeg`,
-      alt: "interior 7",
+      image: `${githubBaseUrl}/79thst.jpeg`,
+      alt: "79th street",
       description: "INTERIOR DESIGN, ART CONSULTING. UPPER EAST SIDE, NEW YORK.",
       category: "interior-design"
     },
     {
       id: 13,
-      image: `${githubBaseUrl}/interior8.jpeg`,
-      alt: "interior 8",
+      image: `${githubBaseUrl}/bedroom.jpg`,
+      alt: "bedroom",
       description: "INTERIOR DESIGN, ART CONSULTING. UPPER EAST SIDE, NEW YORK.",
       category: "interior-design"
     },
     {
       id: 14,
-      image: `${githubBaseUrl}/interior9.jpeg`,
-      alt: "interior 9",
+      image: `${githubBaseUrl}/jon-dining.jpg`,
+      alt: "dining room",
       description: "INTERIOR DESIGN, ART CONSULTING. UPPER EAST SIDE, NEW YORK.",
       category: "interior-design"
     },
     {
       id: 15,
-      image: `${githubBaseUrl}/interior24.jpeg`,
-      alt: "interior 24",
+      image: `${githubBaseUrl}/jon-LR.jpg`,
+      alt: "living room",
       description: "INTERIOR DESIGN, ART CONSULTING. UPPER EAST SIDE, NEW YORK.",
       category: "interior-design"
     },
     {
       id: 16,
-      image: `${githubBaseUrl}/interior10.jpeg`,
-      alt: "interior 10",
+      image: `${githubBaseUrl}/livingroom.JPG`,
+      alt: "living room",
       description: "INTERIOR DESIGN, ART CONSULTING. UPPER EAST SIDE, NEW YORK.",
       category: "interior-design"
     },
     {
       id: 17,
-      image: `${githubBaseUrl}/interior11.jpeg`,
-      alt: "interior 11",
-      description: "INTERIOR DESIGN, ART CONSULTING. SAG HARBOR, NEW YORK.",
+      image: `${githubBaseUrl}/crib.JPG`,
+      alt: "nursery",
+      description: "INTERIOR DESIGN, ART CONSULTING. UPPER EAST SIDE, NEW YORK.",
       category: "interior-design"
     },
     
     // Bathroom renovations
     {
       id: 18,
-      image: `${githubBaseUrl}/interior12.jpeg`,
-      alt: "interior 12",
+      image: `${githubBaseUrl}/bath1.jpeg`,
+      alt: "bathroom 1",
       description: "BATHROOM, COMPLETE RENOVATION. UPPER EAST SIDE, NEW YORK.",
       category: "bathroom"
     },
     {
       id: 19,
-      image: `${githubBaseUrl}/interior15.jpeg`,
-      alt: "interior 15",
+      image: `${githubBaseUrl}/bath2.jpeg`,
+      alt: "bathroom 2",
       description: "BATHROOM, COMPLETE RENOVATION. UPPER EAST SIDE, NEW YORK.",
       category: "bathroom"
     },
     {
       id: 20,
-      image: `${githubBaseUrl}/interior14.jpeg`,
-      alt: "interior 14",
+      image: `${githubBaseUrl}/bath3.jpeg`,
+      alt: "bathroom 3",
       description: "BATHROOM, COMPLETE RENOVATION. UPPER EAST SIDE, NEW YORK.",
       category: "bathroom"
     },
     {
       id: 21,
-      image: `${githubBaseUrl}/interior13.jpeg`,
-      alt: "interior 13",
+      image: `${githubBaseUrl}/bath4.jpeg`,
+      alt: "bathroom 4",
       description: "BATHROOM, COMPLETE RENOVATION. UPPER EAST SIDE, NEW YORK.",
       category: "bathroom"
     },
     {
       id: 22,
-      image: `${githubBaseUrl}/interior16.jpeg`,
-      alt: "interior 16",
+      image: `${githubBaseUrl}/bath5.jpeg`,
+      alt: "bathroom 5",
       description: "BATHROOM, COMPLETE RENOVATION. UPPER EAST SIDE, NEW YORK.",
       category: "bathroom"
+    },
+    {
+      id: 23,
+      image: `${githubBaseUrl}/bath6.jpeg`,
+      alt: "bathroom 6",
+      description: "BATHROOM, COMPLETE RENOVATION. UPPER EAST SIDE, NEW YORK.",
+      category: "bathroom"
+    },
+    
+    // Before/After comparisons
+    {
+      id: 24,
+      image: `${githubBaseUrl}/before-after.jpg`,
+      alt: "before after comparison",
+      description: "COMPLETE RENOVATION BEFORE & AFTER. UPPER EAST SIDE, NEW YORK.",
+      category: "renovation"
+    },
+    {
+      id: 25,
+      image: `${githubBaseUrl}/before-after-1.jpg`,
+      alt: "before after comparison 1",
+      description: "COMPLETE RENOVATION BEFORE & AFTER. UPPER EAST SIDE, NEW YORK.",
+      category: "renovation"
+    },
+    {
+      id: 26,
+      image: `${githubBaseUrl}/reno-before.jpg`,
+      alt: "renovation before",
+      description: "RENOVATION BEFORE. UPPER EAST SIDE, NEW YORK.",
+      category: "renovation"
+    },
+    {
+      id: 27,
+      image: `${githubBaseUrl}/reno-after.jpg`,
+      alt: "renovation after",
+      description: "RENOVATION AFTER. UPPER EAST SIDE, NEW YORK.",
+      category: "renovation"
     }
   ];
 
