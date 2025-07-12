@@ -36,6 +36,7 @@ const Artworks = () => {
           <h1 className="text-4xl md:text-5xl font-light">
             Artworks
           </h1>
+          <p className="text-lg text-muted-foreground mt-4">
             Page under construction 🚧
           </p>
         </div>
