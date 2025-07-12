@@ -3,32 +3,34 @@ import Header from "@/components/Header";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 const Interiors = () => {
+  const githubBaseUrl = "https://raw.githubusercontent.com/alexwes/buenos-aires-loft-nyc/main/public/lovable-uploads";
+  
   const interiorProjects = [
     // Kitchen renovations
     {
       id: 1,
-      image: "/lovable-uploads/interior21.jpeg",
+      image: `${githubBaseUrl}/interior21.jpeg`,
       alt: "interior 21",
       description: "KITCHEN, COMPLETE RENOVATION. UPPER EAST SIDE, NEW YORK.",
       category: "kitchen"
     },
     {
       id: 2,
-      image: "/lovable-uploads/interior19.jpeg",
+      image: `${githubBaseUrl}/interior19.jpeg`,
       alt: "interior 19",
       description: "KITCHEN, COMPLETE RENOVATION. UPPER EAST SIDE, NEW YORK.",
       category: "kitchen"
     },
     {
       id: 3,
-      image: "/lovable-uploads/interior23.jpeg",
+      image: `${githubBaseUrl}/interior23.jpeg`,
       alt: "interior 23",
       description: "KITCHEN, COMPLETE RENOVATION. UPPER EAST SIDE, NEW YORK.",
       category: "kitchen"
     },
     {
       id: 4,
-      image: "/lovable-uploads/interior20.jpeg",
+      image: `${githubBaseUrl}/interior20.jpeg`,
       alt: "interior 20",
       description: "KITCHEN, COMPLETE RENOVATION. UPPER EAST SIDE, NEW YORK.",
       category: "kitchen"
@@ -37,91 +39,91 @@ const Interiors = () => {
     // Interior design & art consulting
     {
       id: 5,
-      image: "/lovable-uploads/newinterior.jpg",
+      image: `${githubBaseUrl}/newinterior.jpg`,
       alt: "new interior",
       description: "INTERIOR DESIGN, ART CONSULTING. UPPER EAST SIDE, NEW YORK.",
       category: "interior-design"
     },
     {
       id: 6,
-      image: "/lovable-uploads/bedroom2.jpg",
+      image: `${githubBaseUrl}/bedroom2.jpg`,
       alt: "bedroom 2",
       description: "INTERIOR DESIGN, ART CONSULTING. UPPER EAST SIDE, NEW YORK.",
       category: "interior-design"
     },
     {
       id: 7,
-      image: "/lovable-uploads/interior1.jpeg",
+      image: `${githubBaseUrl}/interior1.jpeg`,
       alt: "interior 1",
       description: "INTERIOR DESIGN, ART CONSULTING. UPPER EAST SIDE, NEW YORK.",
       category: "interior-design"
     },
     {
       id: 8,
-      image: "/lovable-uploads/interior3.jpeg",
+      image: `${githubBaseUrl}/interior3.jpeg`,
       alt: "interior 3",
       description: "INTERIOR DESIGN, ART CONSULTING. UPPER EAST SIDE, NEW YORK.",
       category: "interior-design"
     },
     {
       id: 9,
-      image: "/lovable-uploads/interior4.jpeg",
+      image: `${githubBaseUrl}/interior4.jpeg`,
       alt: "interior 4",
       description: "INTERIOR DESIGN, ART CONSULTING. UPPER EAST SIDE, NEW YORK.",
       category: "interior-design"
     },
     {
       id: 10,
-      image: "/lovable-uploads/interior5.jpeg",
+      image: `${githubBaseUrl}/interior5.jpeg`,
       alt: "interior 5",
       description: "INTERIOR DESIGN, ART CONSULTING. UPPER EAST SIDE, NEW YORK.",
       category: "interior-design"
     },
     {
       id: 11,
-      image: "/lovable-uploads/interior6.jpeg",
+      image: `${githubBaseUrl}/interior6.jpeg`,
       alt: "interior 6",
       description: "INTERIOR DESIGN, ART CONSULTING. UPPER EAST SIDE, NEW YORK.",
       category: "interior-design"
     },
     {
       id: 12,
-      image: "/lovable-uploads/interior7.jpeg",
+      image: `${githubBaseUrl}/interior7.jpeg`,
       alt: "interior 7",
       description: "INTERIOR DESIGN, ART CONSULTING. UPPER EAST SIDE, NEW YORK.",
       category: "interior-design"
     },
     {
       id: 13,
-      image: "/lovable-uploads/interior8.jpeg",
+      image: `${githubBaseUrl}/interior8.jpeg`,
       alt: "interior 8",
       description: "INTERIOR DESIGN, ART CONSULTING. UPPER EAST SIDE, NEW YORK.",
       category: "interior-design"
     },
     {
       id: 14,
-      image: "/lovable-uploads/interior9.jpeg",
+      image: `${githubBaseUrl}/interior9.jpeg`,
       alt: "interior 9",
       description: "INTERIOR DESIGN, ART CONSULTING. UPPER EAST SIDE, NEW YORK.",
       category: "interior-design"
     },
     {
       id: 15,
-      image: "/lovable-uploads/interior24.jpeg",
+      image: `${githubBaseUrl}/interior24.jpeg`,
       alt: "interior 24",
       description: "INTERIOR DESIGN, ART CONSULTING. UPPER EAST SIDE, NEW YORK.",
       category: "interior-design"
     },
     {
       id: 16,
-      image: "/lovable-uploads/interior10.jpeg",
+      image: `${githubBaseUrl}/interior10.jpeg`,
       alt: "interior 10",
       description: "INTERIOR DESIGN, ART CONSULTING. UPPER EAST SIDE, NEW YORK.",
       category: "interior-design"
     },
     {
       id: 17,
-      image: "/lovable-uploads/interior11.jpeg",
+      image: `${githubBaseUrl}/interior11.jpeg`,
       alt: "interior 11",
       description: "INTERIOR DESIGN, ART CONSULTING. SAG HARBOR, NEW YORK.",
       category: "interior-design"
@@ -130,35 +132,35 @@ const Interiors = () => {
     // Bathroom renovations
     {
       id: 18,
-      image: "/lovable-uploads/interior12.jpeg",
+      image: `${githubBaseUrl}/interior12.jpeg`,
       alt: "interior 12",
       description: "BATHROOM, COMPLETE RENOVATION. UPPER EAST SIDE, NEW YORK.",
       category: "bathroom"
     },
     {
       id: 19,
-      image: "/lovable-uploads/interior15.jpeg",
+      image: `${githubBaseUrl}/interior15.jpeg`,
       alt: "interior 15",
       description: "BATHROOM, COMPLETE RENOVATION. UPPER EAST SIDE, NEW YORK.",
       category: "bathroom"
     },
     {
       id: 20,
-      image: "/lovable-uploads/interior14.jpeg",
+      image: `${githubBaseUrl}/interior14.jpeg`,
       alt: "interior 14",
       description: "BATHROOM, COMPLETE RENOVATION. UPPER EAST SIDE, NEW YORK.",
       category: "bathroom"
     },
     {
       id: 21,
-      image: "/lovable-uploads/interior13.jpeg",
+      image: `${githubBaseUrl}/interior13.jpeg`,
       alt: "interior 13",
       description: "BATHROOM, COMPLETE RENOVATION. UPPER EAST SIDE, NEW YORK.",
       category: "bathroom"
     },
     {
       id: 22,
-      image: "/lovable-uploads/interior16.jpeg",
+      image: `${githubBaseUrl}/interior16.jpeg`,
       alt: "interior 16",
       description: "BATHROOM, COMPLETE RENOVATION. UPPER EAST SIDE, NEW YORK.",
       category: "bathroom"
