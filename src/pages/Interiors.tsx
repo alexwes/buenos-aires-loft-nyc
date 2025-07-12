@@ -3,7 +3,7 @@ import Header from "@/components/Header";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 const Interiors = () => {
-  const githubBaseUrl = "https://raw.githubusercontent.com/alexwes/buenos-aires-loft-nyc/main/public/lovable-uploads";
+  const githubBaseUrl = "https://raw.githubusercontent.com/alexwes/buenos-aires-loft-nyc/refs/heads/main/public/lovable-uploads";
   
   const interiorProjects = [
     // Kitchen renovations
