@@ -210,7 +210,7 @@ const Interiors = () => {
       <Header />
 
       {/* Header */}
-      <section className="py-16 px-4 bg-accent">
+      <section className="py-16 px-4">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-light text-foreground mb-4">
             Interiors
