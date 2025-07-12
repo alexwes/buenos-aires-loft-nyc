@@ -1,24 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Mail, Phone, MapPin } from "lucide-react";
-import Navigation from "@/components/Navigation";
+import Header from "@/components/Header";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      {/* Header with Logo */}
-      <header className="bg-background border-b border-border py-4 px-6 relative z-20">
-        <div className="max-w-7xl mx-auto flex justify-center">
-          <img 
-            src="/lovable-uploads/3f2a3d94-aac1-45d5-8222-33fe85f17012.png" 
-            alt="Estefania Bustamante - Art and Design Consulting LLC" 
-            className="h-16 object-contain"
-          />
-        </div>
-      </header>
-
-      {/* Navigation */}
-      <Navigation />
+      {/* Standard Header */}
+      <Header />
 
       {/* Hero Section */}
       <section className="relative min-h-screen">

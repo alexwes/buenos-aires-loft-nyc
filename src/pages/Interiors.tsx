@@ -1,4 +1,5 @@
 import { Card } from "@/components/ui/card";
+import Header from "@/components/Header";
 
 const Interiors = () => {
   // Placeholder for interior design images - you can replace these with actual uploaded images
@@ -43,6 +44,9 @@ const Interiors = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Standard Header */}
+      <Header />
+
       {/* Header */}
       <section className="py-16 px-4 bg-accent">
         <div className="max-w-6xl mx-auto text-center">

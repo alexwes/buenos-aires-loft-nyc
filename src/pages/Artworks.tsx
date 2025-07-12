@@ -1,4 +1,5 @@
 import { Card } from "@/components/ui/card";
+import Header from "@/components/Header";
 
 const Artworks = () => {
   // Placeholder for artwork images - you can replace these with actual uploaded images
@@ -49,6 +50,9 @@ const Artworks = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Standard Header */}
+      <Header />
+
       {/* Header */}
       <section className="py-16 px-4 bg-accent">
         <div className="max-w-6xl mx-auto text-center">
