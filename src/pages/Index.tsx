@@ -8,21 +8,18 @@ const Index = () => {
       {/* Header with Logo */}
       <header className="absolute top-0 left-0 right-0 z-20 p-6">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <div className="bg-background/90 backdrop-blur-sm rounded-lg px-6 py-3 border border-border">
-            <div className="text-center">
-              <h1 className="text-lg font-light tracking-wider text-primary">
-                ESTEFANIA BUSTAMANTE
-              </h1>
-              <p className="text-xs tracking-widest text-muted-foreground mt-1">
-                ART AND DESIGN CONSULTING LLC
-              </p>
-            </div>
+          <div className="bg-background/90 backdrop-blur-sm rounded-lg p-4 border border-border">
+            <img 
+              src="/lovable-uploads/3f2a3d94-aac1-45d5-8222-33fe85f17012.png" 
+              alt="Estefania Bustamante - Art and Design Consulting LLC" 
+              className="h-12 object-contain"
+            />
           </div>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center px-4">
+      <section className="relative min-h-screen">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img 
@@ -30,34 +27,6 @@ const Index = () => {
             alt="Estefania's vibrant interior design with colorful artwork" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-background/30"></div>
-        </div>
-        
-        <div className="relative z-10 max-w-4xl mx-auto text-center space-y-8">
-          <div className="space-y-4">
-            <h1 className="text-5xl md:text-7xl font-light tracking-wide text-foreground">
-              Estefania Bustamante
-            </h1>
-            <p className="text-xl md:text-2xl font-light text-warm-gray tracking-wide">
-              Interior Design & Art Curation
-            </p>
-          </div>
-          
-          <div className="space-y-6 max-w-2xl mx-auto">
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              From the vibrant streets of Buenos Aires to the sophisticated elegance of New York, 
-              I create spaces that tell stories through carefully curated design and artful living.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="outline" size="lg" className="text-sm tracking-wide">
-                View Portfolio
-              </Button>
-              <Button size="lg" className="text-sm tracking-wide">
-                Get In Touch
-              </Button>
-            </div>
-          </div>
         </div>
       </section>
 
