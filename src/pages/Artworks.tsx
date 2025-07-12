@@ -33,10 +33,9 @@ const Artworks = () => {
       {/* Header */}
       <section className="py-16 px-4 bg-accent">
         <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-light text-foreground mb-4">
+          <h1 className="text-4xl md:text-5xl font-light">
             Artworks
           </h1>
-          <p className="text-lg text-muted-foreground">
             Page under construction 🚧
           </p>
         </div>
