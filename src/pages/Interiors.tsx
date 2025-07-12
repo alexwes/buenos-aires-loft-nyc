@@ -3,44 +3,166 @@ import Header from "@/components/Header";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 const Interiors = () => {
-  // Placeholder for interior design images - you can replace these with actual uploaded images
   const interiorProjects = [
+    // Kitchen renovations
     {
       id: 1,
-      title: "Modern Living Space",
-      description: "Contemporary design with warm accents",
-      image: "/placeholder.svg", // Replace with actual image path
+      image: "/lovable-uploads/interior21.jpeg",
+      alt: "interior 21",
+      description: "KITCHEN, COMPLETE RENOVATION. UPPER EAST SIDE, NEW YORK.",
+      category: "kitchen"
     },
     {
       id: 2,
-      title: "Elegant Bedroom Suite",
-      description: "Sophisticated comfort and style",
-      image: "/placeholder.svg", // Replace with actual image path
+      image: "/lovable-uploads/interior19.jpeg",
+      alt: "interior 19",
+      description: "KITCHEN, COMPLETE RENOVATION. UPPER EAST SIDE, NEW YORK.",
+      category: "kitchen"
     },
     {
       id: 3,
-      title: "Luxury Kitchen Design",
-      description: "Functional beauty for culinary excellence",
-      image: "/placeholder.svg", // Replace with actual image path
+      image: "/lovable-uploads/interior23.jpeg",
+      alt: "interior 23",
+      description: "KITCHEN, COMPLETE RENOVATION. UPPER EAST SIDE, NEW YORK.",
+      category: "kitchen"
     },
     {
       id: 4,
-      title: "Artistic Dining Room",
-      description: "Where art meets everyday living",
-      image: "/placeholder.svg", // Replace with actual image path
+      image: "/lovable-uploads/interior20.jpeg",
+      alt: "interior 20",
+      description: "KITCHEN, COMPLETE RENOVATION. UPPER EAST SIDE, NEW YORK.",
+      category: "kitchen"
     },
+    
+    // Interior design & art consulting
     {
       id: 5,
-      title: "Serene Home Office",
-      description: "Productivity in a peaceful environment",
-      image: "/placeholder.svg", // Replace with actual image path
+      image: "/lovable-uploads/newinterior.jpg",
+      alt: "new interior",
+      description: "INTERIOR DESIGN, ART CONSULTING. UPPER EAST SIDE, NEW YORK.",
+      category: "interior-design"
     },
     {
       id: 6,
-      title: "Cozy Reading Nook",
-      description: "A perfect retreat for quiet moments",
-      image: "/placeholder.svg", // Replace with actual image path
+      image: "/lovable-uploads/bedroom2.jpg",
+      alt: "bedroom 2",
+      description: "INTERIOR DESIGN, ART CONSULTING. UPPER EAST SIDE, NEW YORK.",
+      category: "interior-design"
     },
+    {
+      id: 7,
+      image: "/lovable-uploads/interior1.jpeg",
+      alt: "interior 1",
+      description: "INTERIOR DESIGN, ART CONSULTING. UPPER EAST SIDE, NEW YORK.",
+      category: "interior-design"
+    },
+    {
+      id: 8,
+      image: "/lovable-uploads/interior3.jpeg",
+      alt: "interior 3",
+      description: "INTERIOR DESIGN, ART CONSULTING. UPPER EAST SIDE, NEW YORK.",
+      category: "interior-design"
+    },
+    {
+      id: 9,
+      image: "/lovable-uploads/interior4.jpeg",
+      alt: "interior 4",
+      description: "INTERIOR DESIGN, ART CONSULTING. UPPER EAST SIDE, NEW YORK.",
+      category: "interior-design"
+    },
+    {
+      id: 10,
+      image: "/lovable-uploads/interior5.jpeg",
+      alt: "interior 5",
+      description: "INTERIOR DESIGN, ART CONSULTING. UPPER EAST SIDE, NEW YORK.",
+      category: "interior-design"
+    },
+    {
+      id: 11,
+      image: "/lovable-uploads/interior6.jpeg",
+      alt: "interior 6",
+      description: "INTERIOR DESIGN, ART CONSULTING. UPPER EAST SIDE, NEW YORK.",
+      category: "interior-design"
+    },
+    {
+      id: 12,
+      image: "/lovable-uploads/interior7.jpeg",
+      alt: "interior 7",
+      description: "INTERIOR DESIGN, ART CONSULTING. UPPER EAST SIDE, NEW YORK.",
+      category: "interior-design"
+    },
+    {
+      id: 13,
+      image: "/lovable-uploads/interior8.jpeg",
+      alt: "interior 8",
+      description: "INTERIOR DESIGN, ART CONSULTING. UPPER EAST SIDE, NEW YORK.",
+      category: "interior-design"
+    },
+    {
+      id: 14,
+      image: "/lovable-uploads/interior9.jpeg",
+      alt: "interior 9",
+      description: "INTERIOR DESIGN, ART CONSULTING. UPPER EAST SIDE, NEW YORK.",
+      category: "interior-design"
+    },
+    {
+      id: 15,
+      image: "/lovable-uploads/interior24.jpeg",
+      alt: "interior 24",
+      description: "INTERIOR DESIGN, ART CONSULTING. UPPER EAST SIDE, NEW YORK.",
+      category: "interior-design"
+    },
+    {
+      id: 16,
+      image: "/lovable-uploads/interior10.jpeg",
+      alt: "interior 10",
+      description: "INTERIOR DESIGN, ART CONSULTING. UPPER EAST SIDE, NEW YORK.",
+      category: "interior-design"
+    },
+    {
+      id: 17,
+      image: "/lovable-uploads/interior11.jpeg",
+      alt: "interior 11",
+      description: "INTERIOR DESIGN, ART CONSULTING. SAG HARBOR, NEW YORK.",
+      category: "interior-design"
+    },
+    
+    // Bathroom renovations
+    {
+      id: 18,
+      image: "/lovable-uploads/interior12.jpeg",
+      alt: "interior 12",
+      description: "BATHROOM, COMPLETE RENOVATION. UPPER EAST SIDE, NEW YORK.",
+      category: "bathroom"
+    },
+    {
+      id: 19,
+      image: "/lovable-uploads/interior15.jpeg",
+      alt: "interior 15",
+      description: "BATHROOM, COMPLETE RENOVATION. UPPER EAST SIDE, NEW YORK.",
+      category: "bathroom"
+    },
+    {
+      id: 20,
+      image: "/lovable-uploads/interior14.jpeg",
+      alt: "interior 14",
+      description: "BATHROOM, COMPLETE RENOVATION. UPPER EAST SIDE, NEW YORK.",
+      category: "bathroom"
+    },
+    {
+      id: 21,
+      image: "/lovable-uploads/interior13.jpeg",
+      alt: "interior 13",
+      description: "BATHROOM, COMPLETE RENOVATION. UPPER EAST SIDE, NEW YORK.",
+      category: "bathroom"
+    },
+    {
+      id: 22,
+      image: "/lovable-uploads/interior16.jpeg",
+      alt: "interior 16",
+      description: "BATHROOM, COMPLETE RENOVATION. UPPER EAST SIDE, NEW YORK.",
+      category: "bathroom"
+    }
   ];
 
   return (
@@ -55,8 +177,33 @@ const Interiors = () => {
             Interiors
           </h1>
           <p className="text-lg text-muted-foreground">
-            Page under construction 🚧
+            Sophisticated interior design and complete renovations across New York
           </p>
+        </div>
+      </section>
+
+      {/* Interiors Gallery */}
+      <section className="py-16 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {interiorProjects.map((project) => (
+              <div key={project.id} className="group relative overflow-hidden rounded-lg shadow-lg">
+                <div className="aspect-[4/3] relative">
+                  <img 
+                    src={project.image} 
+                    alt={project.alt}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  {/* Overlay */}
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-center justify-center p-4">
+                    <div className="text-white text-sm font-light tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center">
+                      {project.description}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
