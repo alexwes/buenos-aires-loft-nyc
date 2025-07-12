@@ -216,7 +216,6 @@ const Interiors = () => {
             Interiors
           </h1>
           <p className="text-lg text-muted-foreground">
-            Sophisticated interior design and complete renovations across New York
           </p>
         </div>
       </section>
