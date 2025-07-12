@@ -8,13 +8,13 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Header with Logo */}
-      <header className="absolute top-0 left-0 right-0 z-10 p-6">
+      <header className="absolute top-0 left-0 right-0 z-20 p-6">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <div className="flex items-center">
+          <div className="flex items-center bg-background/80 backdrop-blur-sm rounded-full p-2">
             <img 
               src={logoImage} 
               alt="Estefania Bustamante" 
-              className="h-12 w-12 rounded-full object-cover"
+              className="h-16 w-16 rounded-full object-cover border-2 border-border"
             />
           </div>
         </div>
@@ -27,9 +27,9 @@ const Index = () => {
           <img 
             src={heroImage} 
             alt="Elegant interior design" 
-            className="w-full h-full object-cover"
+            className="w-full h-full object-contain bg-warm-beige"
           />
-          <div className="absolute inset-0 bg-background/60"></div>
+          <div className="absolute inset-0 bg-background/40"></div>
         </div>
         
         <div className="relative z-10 max-w-4xl mx-auto text-center space-y-8">
