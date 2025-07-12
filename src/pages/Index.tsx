@@ -6,15 +6,13 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Header with Logo */}
-      <header className="absolute top-0 left-0 right-0 z-20 p-6">
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <div className="bg-background/90 backdrop-blur-sm rounded-lg p-4 border border-border">
-            <img 
-              src="/lovable-uploads/3f2a3d94-aac1-45d5-8222-33fe85f17012.png" 
-              alt="Estefania Bustamante - Art and Design Consulting LLC" 
-              className="h-12 object-contain"
-            />
-          </div>
+      <header className="bg-background border-b border-border py-4 px-6 relative z-20">
+        <div className="max-w-7xl mx-auto flex justify-center">
+          <img 
+            src="/lovable-uploads/3f2a3d94-aac1-45d5-8222-33fe85f17012.png" 
+            alt="Estefania Bustamante - Art and Design Consulting LLC" 
+            className="h-16 object-contain"
+          />
         </div>
       </header>
 
