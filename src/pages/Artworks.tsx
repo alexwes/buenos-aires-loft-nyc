@@ -24,13 +24,9 @@ const Artworks = () => {
       {/* Header */}
       <section className="py-8 px-4">
         <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-light"></h1>
           <h1 className="text-3xl md:text-4xl font-light text-foreground mb-2">
             Artworks
           </h1>
-          <p className="text-lg text-muted-foreground">
-            Page under construction 🚧
-          </p>
         </div>
       </section>
 
