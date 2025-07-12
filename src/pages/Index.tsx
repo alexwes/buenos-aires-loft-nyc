@@ -1,8 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Mail, Phone, MapPin } from "lucide-react";
-import heroImage from "@/assets/hero-interior.jpg";
-import logoImage from "@/assets/logo.jpg";
 
 const Index = () => {
   return (
@@ -10,12 +8,15 @@ const Index = () => {
       {/* Header with Logo */}
       <header className="absolute top-0 left-0 right-0 z-20 p-6">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <div className="flex items-center bg-background/80 backdrop-blur-sm rounded-full p-2">
-            <img 
-              src={logoImage} 
-              alt="Estefania Bustamante" 
-              className="h-16 w-16 rounded-full object-cover border-2 border-border"
-            />
+          <div className="bg-background/90 backdrop-blur-sm rounded-lg px-6 py-3 border border-border">
+            <div className="text-center">
+              <h1 className="text-lg font-light tracking-wider text-primary">
+                ESTEFANIA BUSTAMANTE
+              </h1>
+              <p className="text-xs tracking-widest text-muted-foreground mt-1">
+                ART AND DESIGN CONSULTING LLC
+              </p>
+            </div>
           </div>
         </div>
       </header>
@@ -25,11 +26,11 @@ const Index = () => {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img 
-            src={heroImage} 
-            alt="Elegant interior design" 
-            className="w-full h-full object-contain bg-warm-beige"
+            src="/lovable-uploads/417a7024-f7e9-4547-8be3-4104cf86064b.png" 
+            alt="Estefania's vibrant interior design with colorful artwork" 
+            className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-background/40"></div>
+          <div className="absolute inset-0 bg-background/30"></div>
         </div>
         
         <div className="relative z-10 max-w-4xl mx-auto text-center space-y-8">
