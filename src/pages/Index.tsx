@@ -1,13 +1,38 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Mail, Phone, MapPin } from "lucide-react";
+import heroImage from "@/assets/hero-interior.jpg";
+import logoImage from "@/assets/logo.jpg";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
+      {/* Header with Logo */}
+      <header className="absolute top-0 left-0 right-0 z-10 p-6">
+        <div className="max-w-7xl mx-auto flex justify-between items-center">
+          <div className="flex items-center">
+            <img 
+              src={logoImage} 
+              alt="Estefania Bustamante" 
+              className="h-12 w-12 rounded-full object-cover"
+            />
+          </div>
+        </div>
+      </header>
+
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center px-4">
-        <div className="max-w-4xl mx-auto text-center space-y-8">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src={heroImage} 
+            alt="Elegant interior design" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-background/60"></div>
+        </div>
+        
+        <div className="relative z-10 max-w-4xl mx-auto text-center space-y-8">
           <div className="space-y-4">
             <h1 className="text-5xl md:text-7xl font-light tracking-wide text-foreground">
               Estefania Bustamante
