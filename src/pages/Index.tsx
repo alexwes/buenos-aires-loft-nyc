@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Mail, Phone, MapPin } from "lucide-react";
+import Navigation from "@/components/Navigation";
 
 const Index = () => {
   return (
@@ -15,6 +16,9 @@ const Index = () => {
           />
         </div>
       </header>
+
+      {/* Navigation */}
+      <Navigation />
 
       {/* Hero Section */}
       <section className="relative min-h-screen">
