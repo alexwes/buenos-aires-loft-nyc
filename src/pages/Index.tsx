@@ -56,37 +56,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section className="py-24 px-4">
-        <div className="max-w-4xl mx-auto text-center space-y-12">
-          <div className="space-y-4">
-            <h2 className="text-3xl md:text-4xl font-light text-foreground">
-              Let's Create Together
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Ready to transform your space? I'd love to discuss your vision and bring it to life.
-            </p>
-          </div>
-          
-          <Card className="p-8 max-w-lg mx-auto border-border bg-card">
-            <div className="space-y-6">
-              <div className="flex items-center space-x-4 text-muted-foreground">
-                <Mail className="h-5 w-5" />
-                <span>art@estefaniabustamante.com</span>
-              </div>
-              <div className="flex items-center space-x-4 text-muted-foreground">
-                <Phone className="h-5 w-5" />
-                <span>+1 (631) 353-8924</span>
-              </div>
-              <div className="flex items-center space-x-4 text-muted-foreground">
-                <MapPin className="h-5 w-5" />
-                <span>New York, NY</span>
-              </div>
-            </div>
-          </Card>
-        </div>
-      </section>
-
       {/* Footer */}
       <footer className="py-16 px-4 bg-charcoal text-white">
         <div className="max-w-4xl mx-auto text-center space-y-8">

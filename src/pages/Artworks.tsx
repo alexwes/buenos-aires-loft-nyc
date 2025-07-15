@@ -13,7 +13,8 @@ const Artworks = () => {
     { id: 6, image: `${githubBaseUrl}/artwork8.PNG`, artist: "RACHEL", alt: "artwork 8" },
     { id: 7, image: `${githubBaseUrl}/artwork14.jpg`, artist: "LEONHARD", alt: "artwork 14" },
     { id: 8, image: `${githubBaseUrl}/artwork17.jpg`, artist: "GUSTAVO", alt: "artwork 17" },
-    { id: 9, image: `${githubBaseUrl}/artwork16.jpg`, artist: "MILES", alt: "artwork 16" }
+    { id: 9, image: `${githubBaseUrl}/artwork16.jpg`, artist: "MILES", alt: "artwork 16" },
+    { id: 10, video: `${githubBaseUrl}/video.mp4`, artist: "VIDEO ARTWORK", alt: "video artwork" }
   ];
 
   return (
@@ -36,38 +37,34 @@ const Artworks = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {artworks.map((artwork) => (
               <div key={artwork.id} className="group relative overflow-hidden rounded-lg shadow-lg">
-                <div className="aspect-square relative">
-                  <img 
-                    src={artwork.image} 
-                    alt={artwork.alt}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                  />
+                <div className="aspect-square relative bg-black flex items-center justify-center">
+                  {artwork.video ? (
+                    <video 
+                      controls 
+                      className="max-w-full max-h-full object-cover"
+                      preload="metadata"
+                    >
+                      <source src={artwork.video} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  ) : (
+                    <img 
+                      src={artwork.image} 
+                      alt={artwork.alt}
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                  )}
                   {/* Overlay */}
-                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
-                    <div className="text-white text-2xl font-light tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      {artwork.artist}
+                  {!artwork.video && (
+                    <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                      <div className="text-white text-2xl font-light tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        {artwork.artist}
+                      </div>
                     </div>
-                  </div>
+                  )}
                 </div>
               </div>
             ))}
-            
-            {/* Video Section */}
-            <div className="group relative overflow-hidden rounded-lg shadow-lg">
-              <div className="aspect-square relative bg-black flex items-center justify-center">
-                <video 
-                  controls 
-                  className="max-w-full max-h-full"
-                  poster="images/video-adj.jpg"
-                >
-                  <source src="video.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-                <div className="absolute bottom-4 left-4 text-white text-lg font-light tracking-wider">
-                  MARIA
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
