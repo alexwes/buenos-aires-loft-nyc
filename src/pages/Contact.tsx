@@ -59,7 +59,7 @@ const Contact = () => {
                 <img 
                   src="https://raw.githubusercontent.com/alexwes/buenos-aires-loft-nyc/refs/heads/main/public/images/contact/pigeon.jpg"
                   alt="Estefania Bustamante"
-                  className="w-full max-w-2xl mx-auto rounded-lg shadow-lg"
+                  className="w-1/4 max-w-md mx-auto rounded-lg shadow-lg"
                 />
               </div>
               

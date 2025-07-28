@@ -101,9 +101,6 @@ const Art = () => {
 
               {/* Logo */}
               <Link to="/" className="flex items-center space-x-4">
-                <div className="w-12 h-12 rounded-full border-2 border-foreground flex items-center justify-center">
-                  <span className="text-lg font-light">EB</span>
-                </div>
                 <span className="text-sm font-light tracking-[0.3em]">ESTEFANIA BUSTAMANTE</span>
               </Link>
             </div>
@@ -151,9 +148,6 @@ const Art = () => {
 
               {/* Logo */}
               <Link to="/" className="flex items-center space-x-4">
-                <div className="w-12 h-12 rounded-full border-2 border-foreground flex items-center justify-center">
-                  <span className="text-lg font-light">EB</span>
-                </div>
                 <span className="text-sm font-light tracking-[0.3em]">ESTEFANIA BUSTAMANTE</span>
               </Link>
             </div>
