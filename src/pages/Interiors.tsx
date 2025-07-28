@@ -131,7 +131,7 @@ const Interiors = () => {
 
               {/* Logo */}
               <Link to="/" className="flex items-center space-x-4">
-                <span className="text-sm font-light tracking-[0.3em]">ESTEFANIA INTERIORS</span>
+                <span className="text-sm font-light tracking-[0.3em] font-sans" style={{ transform: 'scaleY(0.7)' }}>ESTEFANIA INTERIORS</span>
               </Link>
             </div>
           </div>
@@ -178,7 +178,7 @@ const Interiors = () => {
 
               {/* Logo */}
               <Link to="/" className="flex items-center space-x-4">
-                <span className="text-sm font-light tracking-[0.3em]">ESTEFANIA BUSTAMANTE</span>
+                <span className="text-sm font-light tracking-[0.3em] font-sans" style={{ transform: 'scaleY(0.7)' }}>ESTEFANIA INTERIORS</span>
               </Link>
             </div>
           </div>
@@ -246,7 +246,7 @@ const Interiors = () => {
 
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-4">
-              <span className="text-sm font-light tracking-[0.3em] font-sans" style={{ transform: 'scaleY(0.7)' }}>ESTEFANIA BUSTAMANTE</span>
+              <span className="text-sm font-light tracking-[0.3em] font-sans" style={{ transform: 'scaleY(0.7)' }}>ESTEFANIA INTERIORS</span>
             </Link>
           </div>
         </div>
