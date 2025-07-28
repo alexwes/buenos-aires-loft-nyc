@@ -4,7 +4,7 @@ const Contact = () => {
   const location = useLocation();
 
   const navItems = [
-    { name: "INTERIORS", path: "/portfolio" },
+    { name: "INTERIORS", path: "/interiors" },
     { name: "ART", path: "/art" },
     { name: "ABOUT", path: "/about" },
     { name: "CONTACT", path: "/contact" },
