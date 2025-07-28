@@ -38,9 +38,6 @@ const About = () => {
 
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-4">
-              <div className="w-12 h-12 rounded-full border-2 border-foreground flex items-center justify-center">
-                <span className="text-lg font-light">EB</span>
-              </div>
               <span className="text-sm font-light tracking-[0.3em]">ESTEFANIA BUSTAMANTE</span>
             </Link>
           </div>
@@ -52,7 +49,7 @@ const About = () => {
         <div className="max-w-7xl mx-auto">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-3xl md:text-4xl font-light tracking-[0.2em] text-foreground mb-12 text-center">
-              ABOUT ESTEFANIA
+              ABOUT
             </h1>
             
             <div className="prose prose-lg max-w-none text-foreground space-y-6 font-light leading-relaxed">
@@ -74,9 +71,11 @@ const About = () => {
               
               {/* Image Placeholder */}
               <div className="my-12 text-center">
-                <div className="bg-gray-200 h-96 w-full max-w-2xl mx-auto rounded-lg flex items-center justify-center mb-4">
-                  <span className="text-gray-500 text-lg font-light tracking-[0.1em]">IMAGE PLACEHOLDER - OXFORD PHOTO</span>
-                </div>
+                <img 
+                  src="https://raw.githubusercontent.com/alexwes/buenos-aires-loft-nyc/refs/heads/main/public/images/about/oxford.jpg"
+                  alt="Estefania with her son, Alexander, at Ashmolean museum in Oxford, UK"
+                  className="w-full max-w-2xl mx-auto rounded-lg shadow-lg mb-4"
+                />
                 <p className="text-sm text-muted-foreground font-light tracking-[0.1em]">
                   Estefania with her son, Alexander, at Ashmolean museum in Oxford, UK.
                 </p>
