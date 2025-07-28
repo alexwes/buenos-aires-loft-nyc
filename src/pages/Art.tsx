@@ -23,7 +23,7 @@ const Art = () => {
                   <li key={item.path}>
                     <Link
                       to={item.path}
-                      className={`text-sm font-medium tracking-wide transition-colors ${
+                      className={`text-sm font-light tracking-[0.2em] transition-colors ${
                         location.pathname === item.path
                           ? "text-foreground border-b-2 border-foreground pb-1"
                           : "text-muted-foreground hover:text-foreground"
@@ -41,7 +41,7 @@ const Art = () => {
               <div className="w-12 h-12 rounded-full border-2 border-foreground flex items-center justify-center">
                 <span className="text-lg font-light">EB</span>
               </div>
-              <span className="text-sm font-light tracking-wider">ESTEFANIA BUSTAMANTE</span>
+              <span className="text-sm font-light tracking-[0.3em]">ESTEFANIA BUSTAMANTE</span>
             </Link>
           </div>
         </div>
@@ -51,7 +51,7 @@ const Art = () => {
       <main className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="text-center text-muted-foreground py-20">
-            <h1 className="text-2xl font-light">Art Page - Coming Soon</h1>
+            <h1 className="text-2xl font-light tracking-[0.2em]">ART PAGE - COMING SOON</h1>
           </div>
         </div>
       </main>

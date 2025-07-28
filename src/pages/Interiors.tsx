@@ -53,7 +53,7 @@ const Interiors = () => {
                   <li key={item.path}>
                     <Link
                       to={item.path}
-                      className={`text-sm font-medium tracking-wide transition-colors ${
+                      className={`text-sm font-light tracking-[0.2em] transition-colors ${
                         location.pathname === item.path
                           ? "text-foreground border-b-2 border-foreground pb-1"
                           : "text-muted-foreground hover:text-foreground"
@@ -71,7 +71,7 @@ const Interiors = () => {
               <div className="w-12 h-12 rounded-full border-2 border-foreground flex items-center justify-center">
                 <span className="text-lg font-light">EB</span>
               </div>
-              <span className="text-sm font-light tracking-wider">ESTEFANIA BUSTAMANTE</span>
+              <span className="text-sm font-light tracking-[0.3em]">ESTEFANIA BUSTAMANTE</span>
             </Link>
           </div>
         </div>
@@ -80,7 +80,7 @@ const Interiors = () => {
       {/* Header */}
       <section className="py-8 px-4">
         <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-3xl md:text-4xl font-light text-foreground mb-2">
+          <h1 className="text-3xl md:text-4xl font-light tracking-[0.2em] text-foreground mb-2">
             Interiors
           </h1>
         </div>
@@ -106,7 +106,7 @@ const Interiors = () => {
                   />
                   {/* Overlay */}
                   <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-center justify-center p-4">
-                    <div className="text-white text-sm font-light tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center">
+                    <div className="text-white text-sm font-light tracking-[0.2em] opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center">
                       {project.location.toUpperCase()}
                     </div>
                   </div>
