@@ -32,6 +32,13 @@ const Index = () => {
             <h1 className="text-2xl md:text-4xl font-light tracking-[0.3em]">
               ESTEFANIA INTERIORS
             </h1>
+            <div className="flex items-center justify-center mt-4 mb-4">
+              <div className="w-16 h-px bg-white"></div>
+              <div className="mx-4 text-sm tracking-[0.2em] font-light">
+                WELCOME
+              </div>
+              <div className="w-16 h-px bg-white"></div>
+            </div>
           </div>
         </div>
       </section>
