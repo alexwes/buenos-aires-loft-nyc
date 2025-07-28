@@ -93,7 +93,38 @@ export default {
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'slideshow-1': 'slideshow-1 25s infinite',
+				'slideshow-2': 'slideshow-2 25s infinite',
+				'slideshow-3': 'slideshow-3 25s infinite',
+				'slideshow-4': 'slideshow-4 25s infinite',
+				'slideshow-5': 'slideshow-5 25s infinite'
+			},
+			keyframes: {
+				'slideshow-1': {
+					'0%, 16%, 100%': { opacity: '1' },
+					'20%, 96%': { opacity: '0' }
+				},
+				'slideshow-2': {
+					'0%, 16%': { opacity: '0' },
+					'20%, 36%': { opacity: '1' },
+					'40%, 100%': { opacity: '0' }
+				},
+				'slideshow-3': {
+					'0%, 36%': { opacity: '0' },
+					'40%, 56%': { opacity: '1' },
+					'60%, 100%': { opacity: '0' }
+				},
+				'slideshow-4': {
+					'0%, 56%': { opacity: '0' },
+					'60%, 76%': { opacity: '1' },
+					'80%, 100%': { opacity: '0' }
+				},
+				'slideshow-5': {
+					'0%, 76%': { opacity: '0' },
+					'80%, 96%': { opacity: '1' },
+					'100%': { opacity: '0' }
+				}
 			}
 		}
 	},

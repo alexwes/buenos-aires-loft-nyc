@@ -12,12 +12,21 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative min-h-screen">
         {/* Background Image */}
-        <div className="absolute inset-0 z-0">
-          <img 
-            src="/lovable-uploads/417a7024-f7e9-4547-8be3-4104cf86064b.png" 
-            alt="Estefania's vibrant interior design with colorful artwork" 
-            className="w-full h-full object-cover"
-          />
+        <div className="absolute inset-0 z-0 overflow-hidden">
+          {[1, 2, 3, 4, 5].map((num) => (
+            <img 
+              key={num}
+              src={`https://raw.githubusercontent.com/alexwes/buenos-aires-loft-nyc/refs/heads/main/public/lovable-uploads/home-page-${num}.jpeg`}
+              alt={`Estefania's interior design showcase ${num}`}
+              className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-2000 ease-in-out ${
+                num === 1 ? 'animate-slideshow-1' : 
+                num === 2 ? 'animate-slideshow-2' : 
+                num === 3 ? 'animate-slideshow-3' : 
+                num === 4 ? 'animate-slideshow-4' : 
+                'animate-slideshow-5'
+              }`}
+            />
+          ))}
         </div>
       </section>
 
