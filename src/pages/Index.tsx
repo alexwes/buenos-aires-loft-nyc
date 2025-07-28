@@ -40,8 +40,8 @@ const Index = () => {
               <div className="space-y-4">
                 <h3 className="text-xl font-light text-foreground">Services</h3>
                 <div className="space-y-2 text-muted-foreground">
-                  <p>• Residential Interior Design</p>
-                  <p>• Art Curation & Consultation</p>
+                  <p>• Residential and Commercial Interior Design</p>
+                  <p>• Art Consultation</p>
                   <p>• Space Planning & Design</p>
                   <p>• Custom Furniture Selection</p>
                 </div>
