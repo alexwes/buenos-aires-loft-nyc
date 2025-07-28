@@ -31,12 +31,7 @@ const Index = () => {
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  I believe that great design is the harmony between functionality and beauty, 
-                  where every element serves both purpose and aesthetic vision.
-                </p>
-                <p>
-                  Drawing inspiration from my South American roots and cosmopolitan New York experience, 
-                  I create spaces that are both timeless and contemporary, sophisticated yet welcoming.
+                  We spend 89% of our lives within indoor spaces, and the way these environments are designed shapes our emotions and actions. Design isn't just about aesthetics—it's a way of thinking, a matter of proportion and balance. At its essence, design is a powerful tool that helps us create spaces that reflect and nurture our humanity.
                 </p>
               </div>
             </div>
