@@ -83,6 +83,19 @@ const Interiors = () => {
     }
   };
 
+  // Sort images to ensure Brooklyn doesn't appear in first 10
+  const sortedProjects = interiorProjects.sort((a, b) => {
+    // If one is Brooklyn and the other isn't, Brooklyn goes later
+    const aIsBrooklyn = a.location.toLowerCase().includes('brooklyn');
+    const bIsBrooklyn = b.location.toLowerCase().includes('brooklyn');
+    
+    if (aIsBrooklyn && !bIsBrooklyn) return 1;
+    if (!aIsBrooklyn && bIsBrooklyn) return -1;
+    
+    // Otherwise maintain original order
+    return 0;
+  });
+
   // Load images on component mount
   useEffect(() => {
     generateImagesFromGitHub();
@@ -252,7 +265,7 @@ const Interiors = () => {
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {interiorProjects.map((project) => (
+            {sortedProjects.map((project) => (
               <div key={project.id} className="group relative overflow-hidden rounded-lg shadow-lg">
                 <div className="aspect-[4/3] relative">
                   <img 
