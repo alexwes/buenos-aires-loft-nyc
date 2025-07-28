@@ -30,11 +30,11 @@ const Index = () => {
           // Fallback to manual list if API doesn't work
           console.log("Using fallback hero images");
           const fallbackImages = [
-            { id: 1, url: `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/Estefania-Bustamante/hero-shots/home-page-1.jpeg`, alt: "Estefania's interior design showcase 1" },
-            { id: 2, url: `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/Estefania-Bustamante/hero-shots/home-page-2.jpeg`, alt: "Estefania's interior design showcase 2" },
-            { id: 3, url: `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/Estefania-Bustamante/hero-shots/home-page-3.jpeg`, alt: "Estefania's interior design showcase 3" },
-            { id: 4, url: `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/Estefania-Bustamante/hero-shots/home-page-4.jpeg`, alt: "Estefania's interior design showcase 4" },
-            { id: 5, url: `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/Estefania-Bustamante/hero-shots/home-page-5.jpeg`, alt: "Estefania's interior design showcase 5" }
+            { id: 1, url: `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/Estefania-Bustamante/hero-shots/home-page-1`, alt: "Estefania's interior design showcase 1" },
+            { id: 2, url: `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/Estefania-Bustamante/hero-shots/home-page-2`, alt: "Estefania's interior design showcase 2" },
+            { id: 3, url: `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/Estefania-Bustamante/hero-shots/home-page-3`, alt: "Estefania's interior design showcase 3" },
+            { id: 4, url: `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/Estefania-Bustamante/hero-shots/home-page-4`, alt: "Estefania's interior design showcase 4" },
+            { id: 5, url: `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/Estefania-Bustamante/hero-shots/home-page-5`, alt: "Estefania's interior design showcase 5" }
           ];
           setHeroImages(fallbackImages);
         }
@@ -42,11 +42,11 @@ const Index = () => {
         console.error("Error fetching hero images:", error);
         // Fallback images
         const fallbackImages = [
-          { id: 1, url: `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/Estefania-Bustamante/hero-shots/home-page-1.jpeg`, alt: "Estefania's interior design showcase 1" },
-          { id: 2, url: `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/Estefania-Bustamante/hero-shots/home-page-2.jpeg`, alt: "Estefania's interior design showcase 2" },
-          { id: 3, url: `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/Estefania-Bustamante/hero-shots/home-page-3.jpeg`, alt: "Estefania's interior design showcase 3" },
-          { id: 4, url: `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/Estefania-Bustamante/hero-shots/home-page-4.jpeg`, alt: "Estefania's interior design showcase 4" },
-          { id: 5, url: `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/Estefania-Bustamante/hero-shots/home-page-5.jpeg`, alt: "Estefania's interior design showcase 5" }
+          { id: 1, url: `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/Estefania-Bustamante/hero-shots/home-page-1`, alt: "Estefania's interior design showcase 1" },
+          { id: 2, url: `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/Estefania-Bustamante/hero-shots/home-page-2`, alt: "Estefania's interior design showcase 2" },
+          { id: 3, url: `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/Estefania-Bustamante/hero-shots/home-page-3`, alt: "Estefania's interior design showcase 3" },
+          { id: 4, url: `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/Estefania-Bustamante/hero-shots/home-page-4`, alt: "Estefania's interior design showcase 4" },
+          { id: 5, url: `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/Estefania-Bustamante/hero-shots/home-page-5`, alt: "Estefania's interior design showcase 5" }
         ];
         setHeroImages(fallbackImages);
       } finally {
