@@ -27,15 +27,11 @@ const Index = () => {
         </div>
         
         {/* Text Overlay */}
-        <div className="absolute inset-0 z-10 flex items-center justify-center">
+        <div className="absolute inset-0 z-10 flex items-end justify-center pb-[25vh]">
           <div className="text-center text-white">
-            <h1 className="text-4xl md:text-6xl font-light tracking-[0.3em] mb-4">
+            <h1 className="text-2xl md:text-4xl font-light tracking-[0.3em]">
               ESTEFANIA INTERIORS
             </h1>
-            <div className="w-px h-12 bg-white mx-auto mb-4"></div>
-            <p className="text-sm md:text-base tracking-[0.2em] font-light">
-              ENTER
-            </p>
           </div>
         </div>
       </section>
