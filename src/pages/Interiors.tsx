@@ -243,15 +243,6 @@ const Interiors = () => {
                           : "text-muted-foreground hover:text-foreground"
                       }`}
                     >
-                      {item.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-
-            {/* Logo */}
-            <Link to="/" className="flex items-center space-x-4">
               <span className="text-sm font-light tracking-[0.3em]">ESTEFANIA BUSTAMANTE</span>
             </Link>
           </div>
