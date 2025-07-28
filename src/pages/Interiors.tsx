@@ -2,92 +2,94 @@ import Header from "@/components/Header";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 const Interiors = () => {
-  const githubBaseUrl = "https://raw.githubusercontent.com/alexwes/buenos-aires-loft-nyc/refs/heads/main/public";
+  const githubBaseUrl = "https://raw.githubusercontent.com/alexwes/buenos-aires-loft-nyc/refs/heads/main/public/images/interiors";
   
-  // Programmatically organized interior projects by location
+  // Debug: Log the base URL
+  console.log("Base URL:", githubBaseUrl);
+  
   const interiorProjects = [
     // UES-1 Project
     {
       id: 1,
-      image: `${githubBaseUrl}/images/interiors/UES-1/bed-after-1.jpg`,
+      image: `${githubBaseUrl}/UES-1/bed-after-1.jpg`,
       alt: "UES-1 bedroom after renovation",
       location: "UES-1"
     },
     {
       id: 2,
-      image: `${githubBaseUrl}/images/interiors/UES-1/bed-before-1.jpg`,
+      image: `${githubBaseUrl}/UES-1/bed-before-1.jpg`,
       alt: "UES-1 bedroom before renovation",
       location: "UES-1"
     },
     {
       id: 3,
-      image: `${githubBaseUrl}/images/interiors/UES-1/entrance-1.jpeg`,
+      image: `${githubBaseUrl}/UES-1/entrance-1.jpeg`,
       alt: "UES-1 entrance",
       location: "UES-1"
     },
     {
       id: 4,
-      image: `${githubBaseUrl}/images/interiors/UES-1/kitch-aft.jpg`,
+      image: `${githubBaseUrl}/UES-1/kitch-aft.jpg`,
       alt: "UES-1 kitchen after renovation",
       location: "UES-1"
     },
     {
       id: 5,
-      image: `${githubBaseUrl}/images/interiors/UES-1/kitchen-1.jpeg`,
+      image: `${githubBaseUrl}/UES-1/kitchen-1.jpeg`,
       alt: "UES-1 kitchen view 1",
       location: "UES-1"
     },
     {
       id: 6,
-      image: `${githubBaseUrl}/images/interiors/UES-1/kitchen-2.jpeg`,
+      image: `${githubBaseUrl}/UES-1/kitchen-2.jpeg`,
       alt: "UES-1 kitchen view 2",
       location: "UES-1"
     },
     {
       id: 7,
-      image: `${githubBaseUrl}/images/interiors/UES-1/kitchen-3.jpeg`,
+      image: `${githubBaseUrl}/UES-1/kitchen-3.jpeg`,
       alt: "UES-1 kitchen view 3",
       location: "UES-1"
     },
     {
       id: 8,
-      image: `${githubBaseUrl}/images/interiors/UES-1/kitchen-4.jpeg`,
+      image: `${githubBaseUrl}/UES-1/kitchen-4.jpeg`,
       alt: "UES-1 kitchen view 4",
       location: "UES-1"
     },
     {
       id: 9,
-      image: `${githubBaseUrl}/images/interiors/UES-1/kitchen-after-1.jpeg`,
+      image: `${githubBaseUrl}/UES-1/kitchen-after-1.jpeg`,
       alt: "UES-1 kitchen after renovation",
       location: "UES-1"
     },
     {
       id: 10,
-      image: `${githubBaseUrl}/images/interiors/UES-1/kitchen-before-1.jpg`,
+      image: `${githubBaseUrl}/UES-1/kitchen-before-1.jpg`,
       alt: "UES-1 kitchen before renovation",
       location: "UES-1"
     },
     {
       id: 11,
-      image: `${githubBaseUrl}/images/interiors/UES-1/living-1.jpeg`,
+      image: `${githubBaseUrl}/UES-1/living-1.jpeg`,
       alt: "UES-1 living room",
       location: "UES-1"
     },
     {
       id: 12,
-      image: `${githubBaseUrl}/images/interiors/UES-1/living-1.JPG`,
+      image: `${githubBaseUrl}/UES-1/living-1.JPG`,
       alt: "UES-1 living room view",
       location: "UES-1"
     },
     {
       id: 13,
-      image: `${githubBaseUrl}/images/interiors/UES-1/living-after-1.jpg`,
+      image: `${githubBaseUrl}/UES-1/living-after-1.jpg`,
       alt: "UES-1 living room after renovation",
       location: "UES-1"
     },
     {
       id: 14,
-      image: `${githubBaseUrl}/images/interiors/UES-1/living-before-1.jpg`,
+      image: `${githubBaseUrl}/UES-1/living-before-1.jpg`,
       alt: "UES-1 living room before renovation",
       location: "UES-1"
     },
@@ -95,13 +97,13 @@ const Interiors = () => {
     // UES-2 Project
     {
       id: 15,
-      image: `${githubBaseUrl}/images/interiors/UES-2/dining-1.jpeg`,
+      image: `${githubBaseUrl}/UES-2/dining-1.jpeg`,
       alt: "UES-2 dining room",
       location: "UES-2"
     },
     {
       id: 16,
-      image: `${githubBaseUrl}/images/interiors/UES-2/living-2.JPG`,
+      image: `${githubBaseUrl}/UES-2/living-2.JPG`,
       alt: "UES-2 living room",
       location: "UES-2"
     },
@@ -109,7 +111,7 @@ const Interiors = () => {
     // Brooklyn Project
     {
       id: 17,
-      image: `${githubBaseUrl}/images/interiors/Brooklyn/bed-1.jpg`,
+      image: `${githubBaseUrl}/Brooklyn/bed-1.jpg`,
       alt: "Brooklyn bedroom",
       location: "Brooklyn"
     },
@@ -117,11 +119,14 @@ const Interiors = () => {
     // Buenos Aires Project
     {
       id: 18,
-      image: `${githubBaseUrl}/images/interiors/Buenos Aires/living-1.png`,
+      image: `${githubBaseUrl}/Buenos Aires/living-1.png`,
       alt: "Buenos Aires living room",
       location: "Buenos Aires"
     }
   ];
+
+  // Debug: Log first few image URLs
+  console.log("Sample image URLs:", interiorProjects.slice(0, 3).map(p => p.image));
 
   return (
     <div className="min-h-screen bg-background">
@@ -149,8 +154,11 @@ const Interiors = () => {
                     alt={project.alt}
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                     onError={(e) => {
-                      console.log(`Failed to load image: ${project.image}`);
+                      console.error(`Failed to load image: ${project.image}`);
                       e.currentTarget.style.display = 'none';
+                    }}
+                    onLoad={() => {
+                      console.log(`Successfully loaded: ${project.image}`);
                     }}
                   />
                   {/* Overlay */}
