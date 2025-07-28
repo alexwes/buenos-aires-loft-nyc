@@ -1,9 +1,61 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 const Index = () => {
-  const githubBaseUrl = "https://raw.githubusercontent.com/alexwes/buenos-aires-loft-nyc/refs/heads/main/public";
+  const [heroImages, setHeroImages] = useState([]);
+  const [loading, setLoading] = useState(true);
+  
+  const cloudName = "daznks9gy";
+  const folderPath = "Estefania Bustamante/hero-shots";
+  
+  useEffect(() => {
+    const fetchHeroImages = async () => {
+      try {
+        // Using Cloudinary's search API to get images from the hero-shots folder
+        const response = await fetch(
+          `https://res.cloudinary.com/${cloudName}/image/list/${encodeURIComponent(folderPath)}.json`
+        );
+        
+        if (response.ok) {
+          const data = await response.json();
+          const imageUrls = data.resources.map((resource, index) => ({
+            id: index + 1,
+            url: `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/${resource.public_id}`,
+            alt: `Estefania's interior design showcase ${index + 1}`
+          }));
+          setHeroImages(imageUrls);
+        } else {
+          // Fallback to manual list if API doesn't work
+          console.log("Using fallback hero images");
+          const fallbackImages = [
+            { id: 1, url: `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/Estefania%20Bustamante/hero-shots/home-page-1`, alt: "Estefania's interior design showcase 1" },
+            { id: 2, url: `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/Estefania%20Bustamante/hero-shots/home-page-2`, alt: "Estefania's interior design showcase 2" },
+            { id: 3, url: `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/Estefania%20Bustamante/hero-shots/home-page-3`, alt: "Estefania's interior design showcase 3" },
+            { id: 4, url: `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/Estefania%20Bustamante/hero-shots/home-page-4`, alt: "Estefania's interior design showcase 4" },
+            { id: 5, url: `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/Estefania%20Bustamante/hero-shots/home-page-5`, alt: "Estefania's interior design showcase 5" }
+          ];
+          setHeroImages(fallbackImages);
+        }
+      } catch (error) {
+        console.error("Error fetching hero images:", error);
+        // Fallback images
+        const fallbackImages = [
+          { id: 1, url: `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/Estefania%20Bustamante/hero-shots/home-page-1`, alt: "Estefania's interior design showcase 1" },
+          { id: 2, url: `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/Estefania%20Bustamante/hero-shots/home-page-2`, alt: "Estefania's interior design showcase 2" },
+          { id: 3, url: `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/Estefania%20Bustamante/hero-shots/home-page-3`, alt: "Estefania's interior design showcase 3" },
+          { id: 4, url: `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/Estefania%20Bustamante/hero-shots/home-page-4`, alt: "Estefania's interior design showcase 4" },
+          { id: 5, url: `https://res.cloudinary.com/${cloudName}/image/upload/f_auto,q_auto/Estefania%20Bustamante/hero-shots/home-page-5`, alt: "Estefania's interior design showcase 5" }
+        ];
+        setHeroImages(fallbackImages);
+      } finally {
+        setLoading(false);
+      }
+    };
+    
+    fetchHeroImages();
+  }, []);
   
   return (
     <div className="min-h-screen bg-background">
@@ -11,20 +63,29 @@ const Index = () => {
       <section className="relative h-screen">
         {/* Background Image */}
         <div className="absolute inset-0 z-0 overflow-hidden">
-          {[1, 2, 3, 4, 5].map((num) => (
+          {loading ? (
+            <div className="absolute inset-0 bg-gray-200 flex items-center justify-center">
+              <span className="text-gray-500">Loading...</span>
+            </div>
+          ) : (
+            heroImages.map((image, index) => (
             <img 
-              key={num}
-              src={`${githubBaseUrl}/images/hero-shots/home-page-${num}.jpeg`}
-              alt={`Estefania's interior design showcase ${num}`}
+              key={image.id}
+              src={image.url}
+              alt={image.alt}
               className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-2000 ease-in-out ${
-                num === 1 ? 'animate-slideshow-1' : 
-                num === 2 ? 'animate-slideshow-2' : 
-                num === 3 ? 'animate-slideshow-3' : 
-                num === 4 ? 'animate-slideshow-4' : 
+                index === 0 ? 'animate-slideshow-1' : 
+                index === 1 ? 'animate-slideshow-2' : 
+                index === 2 ? 'animate-slideshow-3' : 
+                index === 3 ? 'animate-slideshow-4' : 
                 'animate-slideshow-5'
               }`}
+              onError={(e) => {
+                console.error(`Failed to load hero image: ${image.url}`);
+              }}
             />
-          ))}
+          ))
+          )}
         </div>
         
         {/* Text Overlay */}
