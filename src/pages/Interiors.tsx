@@ -14,31 +14,58 @@ const Interiors = () => {
 
   const interiorProjects = [
     // UES-1 Project
-    { id: 1, image: `${githubBaseUrl}/images/interiors/UES-1/bed-after-1.jpg`, alt: "UES-1 bedroom after renovation", location: "UES-1" },
-    { id: 2, image: `${githubBaseUrl}/images/interiors/UES-1/bed-before-1.jpg`, alt: "UES-1 bedroom before renovation", location: "UES-1" },
-    { id: 3, image: `${githubBaseUrl}/images/interiors/UES-1/entrance-1.jpeg`, alt: "UES-1 entrance", location: "UES-1" },
-    { id: 4, image: `${githubBaseUrl}/images/interiors/UES-1/kitch-aft.jpg`, alt: "UES-1 kitchen after renovation", location: "UES-1" },
-    { id: 5, image: `${githubBaseUrl}/images/interiors/UES-1/kitchen-1.jpeg`, alt: "UES-1 kitchen view 1", location: "UES-1" },
-    { id: 6, image: `${githubBaseUrl}/images/interiors/UES-1/kitchen-2.jpeg`, alt: "UES-1 kitchen view 2", location: "UES-1" },
-    { id: 7, image: `${githubBaseUrl}/images/interiors/UES-1/kitchen-3.jpeg`, alt: "UES-1 kitchen view 3", location: "UES-1" },
-    { id: 8, image: `${githubBaseUrl}/images/interiors/UES-1/kitchen-4.jpeg`, alt: "UES-1 kitchen view 4", location: "UES-1" },
-    { id: 9, image: `${githubBaseUrl}/images/interiors/UES-1/kitchen-after-1.jpeg`, alt: "UES-1 kitchen after renovation", location: "UES-1" },
-    { id: 10, image: `${githubBaseUrl}/images/interiors/UES-1/kitchen-before-1.jpg`, alt: "UES-1 kitchen before renovation", location: "UES-1" },
-    { id: 11, image: `${githubBaseUrl}/images/interiors/UES-1/living-1.jpeg`, alt: "UES-1 living room", location: "UES-1" },
-    { id: 12, image: `${githubBaseUrl}/images/interiors/UES-1/living-1.JPG`, alt: "UES-1 living room view", location: "UES-1" },
-    { id: 13, image: `${githubBaseUrl}/images/interiors/UES-1/living-after-1.jpg`, alt: "UES-1 living room after renovation", location: "UES-1" },
-    { id: 14, image: `${githubBaseUrl}/images/interiors/UES-1/living-before-1.jpg`, alt: "UES-1 living room before renovation", location: "UES-1" },
+    { id: 1, image: `${githubBaseUrl}/images/interiors/Upper East Side 79th/bed-after-1.jpg`, alt: "Upper East Side 79th bedroom after renovation", location: "Upper East Side 79th" },
+    { id: 2, image: `${githubBaseUrl}/images/interiors/Upper East Side 79th/bed-before-1.jpg`, alt: "Upper East Side 79th bedroom before renovation", location: "Upper East Side 79th" },
+    { id: 3, image: `${githubBaseUrl}/images/interiors/Upper East Side/entrance-1.jpeg`, alt: "Upper East Side entrance", location: "Upper East Side" },
+    { id: 4, image: `${githubBaseUrl}/images/interiors/Upper East Side 79th/kitchen-1.jpeg`, alt: "Upper East Side 79th kitchen view 1", location: "Upper East Side 79th" },
+    { id: 5, image: `${githubBaseUrl}/images/interiors/Upper East Side 79th/kitchen-2.jpeg`, alt: "Upper East Side 79th kitchen view 2", location: "Upper East Side 79th" },
+    { id: 6, image: `${githubBaseUrl}/images/interiors/Upper East Side 79th/kitchen-3.jpeg`, alt: "Upper East Side 79th kitchen view 3", location: "Upper East Side 79th" },
+    { id: 7, image: `${githubBaseUrl}/images/interiors/Upper East Side 79th/kitchen-4.jpeg`, alt: "Upper East Side 79th kitchen view 4", location: "Upper East Side 79th" },
+    { id: 8, image: `${githubBaseUrl}/images/interiors/Upper East Side 79th/kitchen-5.jpeg`, alt: "Upper East Side 79th kitchen view 5", location: "Upper East Side 79th" },
+    { id: 9, image: `${githubBaseUrl}/images/interiors/Upper East Side 79th/kitchen-6.jpg`, alt: "Upper East Side 79th kitchen view 6", location: "Upper East Side 79th" },
+    { id: 10, image: `${githubBaseUrl}/images/interiors/Upper East Side 79th/bed-1.jpg`, alt: "Upper East Side 79th bedroom", location: "Upper East Side 79th" },
+    { id: 11, image: `${githubBaseUrl}/images/interiors/Upper East Side 79th/bed-2.JPG`, alt: "Upper East Side 79th bedroom view 2", location: "Upper East Side 79th" },
+    { id: 12, image: `${githubBaseUrl}/images/interiors/Upper East Side/living-1.jpg`, alt: "Upper East Side living room", location: "Upper East Side" },
+    { id: 13, image: `${githubBaseUrl}/images/interiors/Upper East Side/living-2.jpg`, alt: "Upper East Side living room view 2", location: "Upper East Side" },
+    { id: 14, image: `${githubBaseUrl}/images/interiors/Upper East Side/living-3.jpg`, alt: "Upper East Side living room view 3", location: "Upper East Side" },
     
-    // UES-2 Project
-    { id: 15, image: `${githubBaseUrl}/images/interiors/UES-2/dining-1.jpeg`, alt: "UES-2 dining room", location: "UES-2" },
-    { id: 16, image: `${githubBaseUrl}/images/interiors/UES-2/living-2.JPG`, alt: "UES-2 living room", location: "UES-2" },
+    // Upper East Side 90th Project
+    { id: 15, image: `${githubBaseUrl}/images/interiors/Upper East Side 90th/dining-1.jpeg`, alt: "Upper East Side 90th dining room", location: "Upper East Side 90th" },
+    { id: 16, image: `${githubBaseUrl}/images/interiors/Upper East Side 90th/living-1.jpeg`, alt: "Upper East Side 90th living room", location: "Upper East Side 90th" },
+    { id: 17, image: `${githubBaseUrl}/images/interiors/Upper East Side 90th/living-2.JPG`, alt: "Upper East Side 90th living room view 2", location: "Upper East Side 90th" },
+    { id: 18, image: `${githubBaseUrl}/images/interiors/Upper East Side 90th/living-3.JPG`, alt: "Upper East Side 90th living room view 3", location: "Upper East Side 90th" },
+    { id: 19, image: `${githubBaseUrl}/images/interiors/Upper East Side 90th/living-4.jpeg`, alt: "Upper East Side 90th living room view 4", location: "Upper East Side 90th" },
+    { id: 20, image: `${githubBaseUrl}/images/interiors/Upper East Side 90th/bed-1.jpeg`, alt: "Upper East Side 90th bedroom", location: "Upper East Side 90th" },
+    { id: 21, image: `${githubBaseUrl}/images/interiors/Upper East Side 90th/bed-2.jpeg`, alt: "Upper East Side 90th bedroom view 2", location: "Upper East Side 90th" },
+    { id: 22, image: `${githubBaseUrl}/images/interiors/Upper East Side 90th/bed-3.jpeg`, alt: "Upper East Side 90th bedroom view 3", location: "Upper East Side 90th" },
     
     // Brooklyn Project
-    { id: 17, image: `${githubBaseUrl}/images/interiors/Brooklyn/bed-1.jpg`, alt: "Brooklyn bedroom", location: "Brooklyn" },
+    { id: 23, image: `${githubBaseUrl}/images/interiors/Brooklyn/bed-1.jpg`, alt: "Brooklyn bedroom", location: "Brooklyn" },
     
     // Buenos Aires Project
-    { id: 18, image: `${githubBaseUrl}/images/interiors/Buenos Aires/living-1.png`, alt: "Buenos Aires living room", location: "Buenos Aires" }
+    { id: 24, image: `${githubBaseUrl}/images/interiors/Buenos Aires/living-1.png`, alt: "Buenos Aires living room", location: "Buenos Aires" },
+    
+    // Manhattan West Side Project
+    { id: 25, image: `${githubBaseUrl}/images/interiors/Manhattan West Side/living-1.jpg`, alt: "Manhattan West Side living room", location: "Manhattan West Side" }
   ];
+
+  // Function to format location text for display
+  const formatLocationText = (location) => {
+    if (location.includes('79th')) {
+      return 'UPPER EAST SIDE, 79th Street';
+    } else if (location.includes('90th')) {
+      return 'UPPER EAST SIDE, 90th Street';
+    } else if (location === 'Upper East Side') {
+      return 'UPPER EAST SIDE';
+    } else if (location === 'Manhattan West Side') {
+      return 'MANHATTAN WEST SIDE';
+    } else if (location === 'Buenos Aires') {
+      return 'BUENOS AIRES';
+    } else if (location === 'Brooklyn') {
+      return 'BROOKLYN';
+    }
+    return location.toUpperCase();
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -77,15 +104,6 @@ const Interiors = () => {
         </div>
       </header>
 
-      {/* Header */}
-      <section className="py-8 px-4">
-        <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-3xl md:text-4xl font-light tracking-[0.2em] text-foreground mb-2">
-            Interiors
-          </h1>
-        </div>
-      </section>
-
       {/* Interiors Gallery */}
       <section className="py-16 px-4">
         <div className="max-w-7xl mx-auto">
@@ -107,7 +125,7 @@ const Interiors = () => {
                   {/* Overlay */}
                   <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-center justify-center p-4">
                     <div className="text-white text-sm font-light tracking-[0.2em] opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center">
-                      {project.location.toUpperCase()}
+                      {formatLocationText(project.location)}
                     </div>
                   </div>
                 </div>
