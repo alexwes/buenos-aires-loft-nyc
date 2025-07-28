@@ -35,7 +35,7 @@ const Index = () => {
             </h1>
             <div className="flex items-center justify-center mt-4 mb-4">
               <div className="w-16 h-px bg-white"></div>
-              <Link to="/portfolio" className="mx-4 text-sm tracking-[0.2em] font-light transform scale-y-[0.7] hover:opacity-80 transition-opacity cursor-pointer">
+              <Link to="/interiors" className="mx-4 text-sm tracking-[0.2em] font-light transform scale-y-[0.7] hover:opacity-80 transition-opacity cursor-pointer">
                 WELCOME
               </Link>
               <div className="w-16 h-px bg-white"></div>
