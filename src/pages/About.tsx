@@ -66,7 +66,7 @@ const About = () => {
               </p>
               
               {/* Image Placeholder */}
-              <div className="my-12 text-center">
+              <div className="mt-16 mb-12 text-center">
                 <img 
                   src="https://raw.githubusercontent.com/alexwes/buenos-aires-loft-nyc/refs/heads/main/public/images/about/oxford.jpg"
                   alt="Estefania with her son, Alexander, at Ashmolean museum in Oxford, UK"

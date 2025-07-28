@@ -48,10 +48,6 @@ const Contact = () => {
       <main className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-3xl md:text-4xl font-light tracking-[0.2em] text-foreground mb-12">
-              CONTACT
-            </h1>
-            
             <div className="space-y-12">
               {/* Contact Information */}
               <div className="text-lg font-light tracking-[0.1em] text-foreground">
@@ -61,7 +57,7 @@ const Contact = () => {
               {/* Contact Image */}
               <div className="my-12">
                 <img 
-                  src="https://raw.githubusercontent.com/alexwes/buenos-aires-loft-nyc/refs/heads/main/public/images/contact/contact.jpg"
+                  src="https://raw.githubusercontent.com/alexwes/buenos-aires-loft-nyc/refs/heads/main/public/images/contact/pigeon.jpg"
                   alt="Estefania Bustamante"
                   className="w-full max-w-2xl mx-auto rounded-lg shadow-lg"
                 />
