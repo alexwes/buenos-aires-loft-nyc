@@ -131,9 +131,6 @@ const Interiors = () => {
 
               {/* Logo */}
               <Link to="/" className="flex items-center space-x-4">
-                <div className="w-12 h-12 rounded-full border-2 border-foreground flex items-center justify-center">
-                  <span className="text-lg font-light">EB</span>
-                </div>
                 <span className="text-sm font-light tracking-[0.3em]">ESTEFANIA BUSTAMANTE</span>
               </Link>
             </div>
@@ -181,9 +178,6 @@ const Interiors = () => {
 
               {/* Logo */}
               <Link to="/" className="flex items-center space-x-4">
-                <div className="w-12 h-12 rounded-full border-2 border-foreground flex items-center justify-center">
-                  <span className="text-lg font-light">EB</span>
-                </div>
                 <span className="text-sm font-light tracking-[0.3em]">ESTEFANIA BUSTAMANTE</span>
               </Link>
             </div>
@@ -226,7 +220,7 @@ const Interiors = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Simple Header */}
+      {/* Header */}
       <header className="border-b border-border">
         <div className="max-w-7xl mx-auto px-6 py-6">
           <div className="flex justify-between items-center">
@@ -243,6 +237,15 @@ const Interiors = () => {
                           : "text-muted-foreground hover:text-foreground"
                       }`}
                     >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+
+            {/* Logo */}
+            <Link to="/" className="flex items-center space-x-4">
               <span className="text-sm font-light tracking-[0.3em]">ESTEFANIA BUSTAMANTE</span>
             </Link>
           </div>
