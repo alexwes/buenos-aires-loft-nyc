@@ -16,7 +16,6 @@ const Interiors = () => {
   const imageDirectories = {
     "Upper East Side 79th": [
       "bed-after-1.jpg",
-      "bed-before-1.jpg", 
       "kitchen-1.jpeg",
       "kitchen-2.jpeg",
       "kitchen-3.jpeg",
