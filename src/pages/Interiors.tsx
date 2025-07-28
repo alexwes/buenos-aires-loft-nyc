@@ -1,9 +1,11 @@
 import { Link, useLocation } from "react-router-dom";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { useState, useEffect } from "react";
 
 const Interiors = () => {
   const location = useLocation();
   const githubBaseUrl = "https://raw.githubusercontent.com/alexwes/buenos-aires-loft-nyc/refs/heads/main/public/images/interiors";
+  const githubApiUrl = "https://api.github.com/repos/alexwes/buenos-aires-loft-nyc/contents/public/images/interiors";
 
   const navItems = [
     { name: "INTERIORS", path: "/interiors" },
@@ -12,66 +14,184 @@ const Interiors = () => {
     { name: "CONTACT", path: "/contact" },
   ];
 
-  // Define the directory structure and file patterns
-  const imageDirectories = {
-    "Upper East Side 79th": [
-      "bed-after-1.jpg",
-      "kitchen-1.jpeg",
-      "kitchen-2.jpeg",
-      "kitchen-3.jpeg",
-      "kitchen-4.jpeg",
-      "kitchen-5.jpeg",
-      "kitchen-6.jpg",
-      "bed-1.jpg",
-      "bed-2.JPG"
-    ],
-    "Upper East Side": [
-      "entrance-1.jpeg",
-      "living-1.jpg",
-      "living-2.jpg",
-      "living-3.jpg"
-    ],
-    "Upper East Side 90th": [
-      "dining-1.jpeg",
-      "living-1.jpeg",
-      "living-2.JPG",
-      "living-3.JPG",
-      "living-4.jpeg",
-      "bed-1.jpeg",
-      "bed-2.jpeg",
-      "bed-3.jpeg"
-    ],
-    "Brooklyn": [
-      "bed-1.jpg"
-    ],
-    "Buenos Aires": [
-      "living-1.png"
-    ],
-    "Manhattan West Side": [
-      "living-1.jpg"
-    ]
+  const [interiorProjects, setInteriorProjects] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  // Fetch directory contents from GitHub API
+  const fetchDirectoryContents = async (path = '') => {
+    try {
+      const url = path ? `${githubApiUrl}/${path}` : githubApiUrl;
+      const response = await fetch(url);
+      
+      if (!response.ok) {
+        throw new Error(`Failed to fetch directory: ${response.status}`);
+      }
+      
+      return await response.json();
+    } catch (error) {
+      console.error('Error fetching directory:', error);
+      throw error;
+    }
   };
 
-  // Generate all images programmatically
-  const generateImages = () => {
-    const allImages = [];
-    let imageId = 1;
-
-    Object.entries(imageDirectories).forEach(([directory, files]) => {
-      files.forEach(filename => {
-        allImages.push({
-          id: imageId++,
-          image: `${githubBaseUrl}/${directory}/${filename}`,
-          alt: `${directory} - ${filename.split('.')[0].replace(/-/g, ' ')}`,
-          location: directory
-        });
-      });
-    });
-
-    return allImages;
+  // Generate all images dynamically from GitHub
+  const generateImagesFromGitHub = async () => {
+    try {
+      setLoading(true);
+      const allImages = [];
+      let imageId = 1;
+      
+      // Get all directories in the interiors folder
+      const directories = await fetchDirectoryContents();
+      
+      // Filter for directories only
+      const imageDirs = directories.filter(item => item.type === 'dir');
+      
+      // For each directory, get its contents
+      for (const dir of imageDirs) {
+        try {
+          const files = await fetchDirectoryContents(dir.name);
+          
+          // Filter for image files only
+          const imageFiles = files.filter(file => 
+            file.type === 'file' && 
+            /\.(jpg|jpeg|png|gif|webp)$/i.test(file.name)
+          );
+          
+          // Add each image to our collection
+          imageFiles.forEach(file => {
+            allImages.push({
+              id: imageId++,
+              image: `${githubBaseUrl}/${dir.name}/${file.name}`,
+              alt: `${dir.name} - ${file.name.split('.')[0].replace(/-/g, ' ')}`,
+              location: dir.name
+            });
+          });
+        } catch (dirError) {
+          console.error(`Error fetching files from ${dir.name}:`, dirError);
+        }
+      }
+      
+      setInteriorProjects(allImages);
+      setError(null);
+    } catch (error) {
+      console.error('Error generating images from GitHub:', error);
+      setError('Failed to load images. Please try again later.');
+    } finally {
+      setLoading(false);
+    }
   };
 
-  const interiorProjects = generateImages();
+  // Load images on component mount
+  useEffect(() => {
+    generateImagesFromGitHub();
+  }, []);
+
+  // Show loading state
+  if (loading) {
+    return (
+      <div className="min-h-screen bg-background">
+        {/* Header */}
+        <header className="border-b border-border">
+          <div className="max-w-7xl mx-auto px-6 py-6">
+            <div className="flex justify-between items-center">
+              {/* Navigation */}
+              <nav>
+                <ul className="flex space-x-8">
+                  {navItems.map((item) => (
+                    <li key={item.path}>
+                      <Link
+                        to={item.path}
+                        className={`text-sm font-light tracking-[0.2em] transition-colors ${
+                          location.pathname === item.path
+                            ? "text-foreground border-b-2 border-foreground pb-1"
+                            : "text-muted-foreground hover:text-foreground"
+                        }`}
+                      >
+                        {item.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+
+              {/* Logo */}
+              <Link to="/" className="flex items-center space-x-4">
+                <div className="w-12 h-12 rounded-full border-2 border-foreground flex items-center justify-center">
+                  <span className="text-lg font-light">EB</span>
+                </div>
+                <span className="text-sm font-light tracking-[0.3em]">ESTEFANIA BUSTAMANTE</span>
+              </Link>
+            </div>
+          </div>
+        </header>
+
+        {/* Loading State */}
+        <div className="flex items-center justify-center min-h-[60vh]">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-foreground mx-auto mb-4"></div>
+            <p className="text-muted-foreground font-light tracking-[0.1em]">Loading images...</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  // Show error state
+  if (error) {
+    return (
+      <div className="min-h-screen bg-background">
+        {/* Header */}
+        <header className="border-b border-border">
+          <div className="max-w-7xl mx-auto px-6 py-6">
+            <div className="flex justify-between items-center">
+              {/* Navigation */}
+              <nav>
+                <ul className="flex space-x-8">
+                  {navItems.map((item) => (
+                    <li key={item.path}>
+                      <Link
+                        to={item.path}
+                        className={`text-sm font-light tracking-[0.2em] transition-colors ${
+                          location.pathname === item.path
+                            ? "text-foreground border-b-2 border-foreground pb-1"
+                            : "text-muted-foreground hover:text-foreground"
+                        }`}
+                      >
+                        {item.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+
+              {/* Logo */}
+              <Link to="/" className="flex items-center space-x-4">
+                <div className="w-12 h-12 rounded-full border-2 border-foreground flex items-center justify-center">
+                  <span className="text-lg font-light">EB</span>
+                </div>
+                <span className="text-sm font-light tracking-[0.3em]">ESTEFANIA BUSTAMANTE</span>
+              </Link>
+            </div>
+          </div>
+        </header>
+
+        {/* Error State */}
+        <div className="flex items-center justify-center min-h-[60vh]">
+          <div className="text-center">
+            <p className="text-red-500 font-light tracking-[0.1em] mb-4">{error}</p>
+            <button 
+              onClick={generateImagesFromGitHub}
+              className="px-6 py-2 border border-foreground text-foreground hover:bg-foreground hover:text-background transition-colors font-light tracking-[0.1em]"
+            >
+              Try Again
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   // Function to format location text for display
   const formatLocationText = (location) => {
@@ -139,12 +259,6 @@ const Interiors = () => {
                     src={project.image} 
                     alt={project.alt}
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                    onError={(e) => {
-                      console.error(`Failed to load image: ${project.image}`);
-                    }}
-                    onLoad={() => {
-                      console.log(`Successfully loaded: ${project.image}`);
-                    }}
                   />
                   {/* Overlay */}
                   <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex items-center justify-center p-4">
