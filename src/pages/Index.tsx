@@ -6,11 +6,8 @@ import Header from "@/components/Header";
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      {/* Standard Header */}
-      <Header />
-
       {/* Hero Section */}
-      <section className="relative min-h-screen">
+      <section className="relative h-screen">
         {/* Background Image */}
         <div className="absolute inset-0 z-0 overflow-hidden">
           {[1, 2, 3, 4, 5].map((num) => (
@@ -28,7 +25,23 @@ const Index = () => {
             />
           ))}
         </div>
+        
+        {/* Text Overlay */}
+        <div className="absolute inset-0 z-10 flex items-center justify-center">
+          <div className="text-center text-white">
+            <h1 className="text-4xl md:text-6xl font-light tracking-[0.3em] mb-4">
+              ESTEFANIA INTERIORS
+            </h1>
+            <div className="w-px h-12 bg-white mx-auto mb-4"></div>
+            <p className="text-sm md:text-base tracking-[0.2em] font-light">
+              ENTER
+            </p>
+          </div>
+        </div>
       </section>
+
+      {/* Standard Header - Now appears after hero */}
+      <Header />
 
       {/* About Section */}
       <section className="py-24 px-4 bg-accent">
