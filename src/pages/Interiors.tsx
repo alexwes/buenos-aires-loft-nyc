@@ -3,7 +3,7 @@ import { Mail, Phone, MapPin } from "lucide-react";
 
 const Interiors = () => {
   const location = useLocation();
-  const githubBaseUrl = "https://raw.githubusercontent.com/alexwes/buenos-aires-loft-nyc/refs/heads/main/public";
+  const githubBaseUrl = "https://raw.githubusercontent.com/alexwes/buenos-aires-loft-nyc/refs/heads/main/public/images/interiors";
 
   const navItems = [
     { name: "INTERIORS", path: "/interiors" },
@@ -12,42 +12,67 @@ const Interiors = () => {
     { name: "CONTACT", path: "/contact" },
   ];
 
-  const interiorProjects = [
-    // UES-1 Project
-    { id: 1, image: `${githubBaseUrl}/images/interiors/Upper East Side 79th/bed-after-1.jpg`, alt: "Upper East Side 79th bedroom after renovation", location: "Upper East Side 79th" },
-    { id: 2, image: `${githubBaseUrl}/images/interiors/Upper East Side 79th/bed-before-1.jpg`, alt: "Upper East Side 79th bedroom before renovation", location: "Upper East Side 79th" },
-    { id: 3, image: `${githubBaseUrl}/images/interiors/Upper East Side/entrance-1.jpeg`, alt: "Upper East Side entrance", location: "Upper East Side" },
-    { id: 4, image: `${githubBaseUrl}/images/interiors/Upper East Side 79th/kitchen-1.jpeg`, alt: "Upper East Side 79th kitchen view 1", location: "Upper East Side 79th" },
-    { id: 5, image: `${githubBaseUrl}/images/interiors/Upper East Side 79th/kitchen-2.jpeg`, alt: "Upper East Side 79th kitchen view 2", location: "Upper East Side 79th" },
-    { id: 6, image: `${githubBaseUrl}/images/interiors/Upper East Side 79th/kitchen-3.jpeg`, alt: "Upper East Side 79th kitchen view 3", location: "Upper East Side 79th" },
-    { id: 7, image: `${githubBaseUrl}/images/interiors/Upper East Side 79th/kitchen-4.jpeg`, alt: "Upper East Side 79th kitchen view 4", location: "Upper East Side 79th" },
-    { id: 8, image: `${githubBaseUrl}/images/interiors/Upper East Side 79th/kitchen-5.jpeg`, alt: "Upper East Side 79th kitchen view 5", location: "Upper East Side 79th" },
-    { id: 9, image: `${githubBaseUrl}/images/interiors/Upper East Side 79th/kitchen-6.jpg`, alt: "Upper East Side 79th kitchen view 6", location: "Upper East Side 79th" },
-    { id: 10, image: `${githubBaseUrl}/images/interiors/Upper East Side 79th/bed-1.jpg`, alt: "Upper East Side 79th bedroom", location: "Upper East Side 79th" },
-    { id: 11, image: `${githubBaseUrl}/images/interiors/Upper East Side 79th/bed-2.JPG`, alt: "Upper East Side 79th bedroom view 2", location: "Upper East Side 79th" },
-    { id: 12, image: `${githubBaseUrl}/images/interiors/Upper East Side/living-1.jpg`, alt: "Upper East Side living room", location: "Upper East Side" },
-    { id: 13, image: `${githubBaseUrl}/images/interiors/Upper East Side/living-2.jpg`, alt: "Upper East Side living room view 2", location: "Upper East Side" },
-    { id: 14, image: `${githubBaseUrl}/images/interiors/Upper East Side/living-3.jpg`, alt: "Upper East Side living room view 3", location: "Upper East Side" },
-    
-    // Upper East Side 90th Project
-    { id: 15, image: `${githubBaseUrl}/images/interiors/Upper East Side 90th/dining-1.jpeg`, alt: "Upper East Side 90th dining room", location: "Upper East Side 90th" },
-    { id: 16, image: `${githubBaseUrl}/images/interiors/Upper East Side 90th/living-1.jpeg`, alt: "Upper East Side 90th living room", location: "Upper East Side 90th" },
-    { id: 17, image: `${githubBaseUrl}/images/interiors/Upper East Side 90th/living-2.JPG`, alt: "Upper East Side 90th living room view 2", location: "Upper East Side 90th" },
-    { id: 18, image: `${githubBaseUrl}/images/interiors/Upper East Side 90th/living-3.JPG`, alt: "Upper East Side 90th living room view 3", location: "Upper East Side 90th" },
-    { id: 19, image: `${githubBaseUrl}/images/interiors/Upper East Side 90th/living-4.jpeg`, alt: "Upper East Side 90th living room view 4", location: "Upper East Side 90th" },
-    { id: 20, image: `${githubBaseUrl}/images/interiors/Upper East Side 90th/bed-1.jpeg`, alt: "Upper East Side 90th bedroom", location: "Upper East Side 90th" },
-    { id: 21, image: `${githubBaseUrl}/images/interiors/Upper East Side 90th/bed-2.jpeg`, alt: "Upper East Side 90th bedroom view 2", location: "Upper East Side 90th" },
-    { id: 22, image: `${githubBaseUrl}/images/interiors/Upper East Side 90th/bed-3.jpeg`, alt: "Upper East Side 90th bedroom view 3", location: "Upper East Side 90th" },
-    
-    // Brooklyn Project
-    { id: 23, image: `${githubBaseUrl}/images/interiors/Brooklyn/bed-1.jpg`, alt: "Brooklyn bedroom", location: "Brooklyn" },
-    
-    // Buenos Aires Project
-    { id: 24, image: `${githubBaseUrl}/images/interiors/Buenos Aires/living-1.png`, alt: "Buenos Aires living room", location: "Buenos Aires" },
-    
-    // Manhattan West Side Project
-    { id: 25, image: `${githubBaseUrl}/images/interiors/Manhattan West Side/living-1.jpg`, alt: "Manhattan West Side living room", location: "Manhattan West Side" }
-  ];
+  // Define the directory structure and file patterns
+  const imageDirectories = {
+    "Upper East Side 79th": [
+      "bed-after-1.jpg",
+      "bed-before-1.jpg", 
+      "kitchen-1.jpeg",
+      "kitchen-2.jpeg",
+      "kitchen-3.jpeg",
+      "kitchen-4.jpeg",
+      "kitchen-5.jpeg",
+      "kitchen-6.jpg",
+      "bed-1.jpg",
+      "bed-2.JPG"
+    ],
+    "Upper East Side": [
+      "entrance-1.jpeg",
+      "living-1.jpg",
+      "living-2.jpg",
+      "living-3.jpg"
+    ],
+    "Upper East Side 90th": [
+      "dining-1.jpeg",
+      "living-1.jpeg",
+      "living-2.JPG",
+      "living-3.JPG",
+      "living-4.jpeg",
+      "bed-1.jpeg",
+      "bed-2.jpeg",
+      "bed-3.jpeg"
+    ],
+    "Brooklyn": [
+      "bed-1.jpg"
+    ],
+    "Buenos Aires": [
+      "living-1.png"
+    ],
+    "Manhattan West Side": [
+      "living-1.jpg"
+    ]
+  };
+
+  // Generate all images programmatically
+  const generateImages = () => {
+    const allImages = [];
+    let imageId = 1;
+
+    Object.entries(imageDirectories).forEach(([directory, files]) => {
+      files.forEach(filename => {
+        allImages.push({
+          id: imageId++,
+          image: `${githubBaseUrl}/${directory}/${filename}`,
+          alt: `${directory} - ${filename.split('.')[0].replace(/-/g, ' ')}`,
+          location: directory
+        });
+      });
+    });
+
+    return allImages;
+  };
+
+  const interiorProjects = generateImages();
 
   // Function to format location text for display
   const formatLocationText = (location) => {
