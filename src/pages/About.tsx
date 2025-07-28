@@ -48,10 +48,6 @@ const About = () => {
       <main className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-3xl md:text-4xl font-light tracking-[0.2em] text-foreground mb-12 text-center">
-              ABOUT
-            </h1>
-            
             <div className="prose prose-lg max-w-none text-foreground space-y-6 font-light leading-relaxed">
               <p>
                 Growing up with an artist mother and a lawyer turned-to-finance father Estefania was always deeply immersed in the visual arts and finance worlds. Since 2001 Estefania has worked with art galleries, collectors, designers, dealers and artists in the US, Argentina and Europe, in both creative and administration roles, assisting sales, catalogue and book publications, exhibitions, and transportation. Works of the artists she acquired years ago have become part of the MoMA NY and other leading museum collections around the world. A work she owned was on loan and exhibited for several years at MALBA Museum of Argentina, and other work of her collection was loaned for temporary exhibition.
