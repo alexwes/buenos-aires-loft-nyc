@@ -30,12 +30,12 @@ const Index = () => {
         {/* Text Overlay */}
         <div className="absolute inset-0 z-10 flex items-end justify-center pb-[10vh]">
           <div className="text-center text-white">
-            <h1 className="text-2xl md:text-4xl font-light tracking-[0.3em]">
+            <h1 className="text-2xl md:text-4xl font-light tracking-[0.3em] font-sans" style={{ transform: 'scaleY(0.7)' }}>
               ESTEFANIA INTERIORS
             </h1>
             <div className="flex items-center justify-center mt-4 mb-4">
               <div className="w-16 h-px bg-white"></div>
-              <Link to="/interiors" className="mx-4 text-sm tracking-[0.2em] font-light hover:opacity-80 transition-opacity cursor-pointer">
+              <Link to="/interiors" className="mx-4 text-sm tracking-[0.2em] font-light hover:opacity-80 transition-opacity cursor-pointer font-sans" style={{ transform: 'scaleY(0.7)' }}>
                 WELCOME
               </Link>
               <div className="w-16 h-px bg-white"></div>
