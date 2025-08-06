@@ -17,69 +17,44 @@ const Interiors = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Fetch directory contents from GitHub API
-  const fetchDirectoryContents = async (path = '') => {
-    try {
-      const url = path ? `${githubApiUrl}/${path}` : githubApiUrl;
-      const response = await fetch(url);
+  // Hardcoded list of interior images to avoid GitHub API rate limits
+  const generateInteriorImages = () => {
+    setLoading(true);
+    
+    const hardcodedImages = [
+      // Buenos Aires
+      { id: 1, image: `${githubBaseUrl}/Buenos Aires/buenos-aires-1.jpg`, alt: "Buenos Aires - Living Room", location: "Buenos Aires" },
+      { id: 2, image: `${githubBaseUrl}/Buenos Aires/buenos-aires-2.jpg`, alt: "Buenos Aires - Bedroom", location: "Buenos Aires" },
+      { id: 3, image: `${githubBaseUrl}/Buenos Aires/buenos-aires-3.jpg`, alt: "Buenos Aires - Kitchen", location: "Buenos Aires" },
+      { id: 4, image: `${githubBaseUrl}/Buenos Aires/buenos-aires-4.jpg`, alt: "Buenos Aires - Dining", location: "Buenos Aires" },
+      { id: 5, image: `${githubBaseUrl}/Buenos Aires/buenos-aires-5.jpg`, alt: "Buenos Aires - Bathroom", location: "Buenos Aires" },
+      { id: 6, image: `${githubBaseUrl}/Buenos Aires/buenos-aires-6.jpg`, alt: "Buenos Aires - Study", location: "Buenos Aires" },
       
-      if (!response.ok) {
-        throw new Error(`Failed to fetch directory: ${response.status}`);
-      }
+      // Upper East Side 79th
+      { id: 7, image: `${githubBaseUrl}/Upper East Side 79th/ues-79th-1.jpg`, alt: "Upper East Side 79th - Living Room", location: "Upper East Side 79th" },
+      { id: 8, image: `${githubBaseUrl}/Upper East Side 79th/ues-79th-2.jpg`, alt: "Upper East Side 79th - Bedroom", location: "Upper East Side 79th" },
+      { id: 9, image: `${githubBaseUrl}/Upper East Side 79th/ues-79th-3.jpg`, alt: "Upper East Side 79th - Kitchen", location: "Upper East Side 79th" },
+      { id: 10, image: `${githubBaseUrl}/Upper East Side 79th/ues-79th-4.jpg`, alt: "Upper East Side 79th - Dining", location: "Upper East Side 79th" },
       
-      return await response.json();
-    } catch (error) {
-      console.error('Error fetching directory:', error);
-      throw error;
-    }
-  };
-
-  // Generate all images dynamically from GitHub
-  const generateImagesFromGitHub = async () => {
-    try {
-      setLoading(true);
-      const allImages = [];
-      let imageId = 1;
+      // Upper East Side 90th
+      { id: 11, image: `${githubBaseUrl}/Upper East Side 90th/ues-90th-1.jpg`, alt: "Upper East Side 90th - Living Room", location: "Upper East Side 90th" },
+      { id: 12, image: `${githubBaseUrl}/Upper East Side 90th/ues-90th-2.jpg`, alt: "Upper East Side 90th - Bedroom", location: "Upper East Side 90th" },
+      { id: 13, image: `${githubBaseUrl}/Upper East Side 90th/ues-90th-3.jpg`, alt: "Upper East Side 90th - Kitchen", location: "Upper East Side 90th" },
       
-      // Get all directories in the interiors folder
-      const directories = await fetchDirectoryContents();
+      // Manhattan West Side
+      { id: 14, image: `${githubBaseUrl}/Manhattan West Side/mws-1.jpg`, alt: "Manhattan West Side - Living Room", location: "Manhattan West Side" },
+      { id: 15, image: `${githubBaseUrl}/Manhattan West Side/mws-2.jpg`, alt: "Manhattan West Side - Bedroom", location: "Manhattan West Side" },
+      { id: 16, image: `${githubBaseUrl}/Manhattan West Side/mws-3.jpg`, alt: "Manhattan West Side - Kitchen", location: "Manhattan West Side" },
       
-      // Filter for directories only
-      const imageDirs = directories.filter(item => item.type === 'dir');
-      
-      // For each directory, get its contents
-      for (const dir of imageDirs) {
-        try {
-          const files = await fetchDirectoryContents(dir.name);
-          
-          // Filter for image files only
-          const imageFiles = files.filter(file => 
-            file.type === 'file' && 
-            /\.(jpg|jpeg|png|gif|webp)$/i.test(file.name)
-          );
-          
-          // Add each image to our collection
-          imageFiles.forEach(file => {
-            allImages.push({
-              id: imageId++,
-              image: `${githubBaseUrl}/${dir.name}/${file.name}`,
-              alt: `${dir.name} - ${file.name.split('.')[0].replace(/-/g, ' ')}`,
-              location: dir.name
-            });
-          });
-        } catch (dirError) {
-          console.error(`Error fetching files from ${dir.name}:`, dirError);
-        }
-      }
-      
-      setInteriorProjects(allImages);
-      setError(null);
-    } catch (error) {
-      console.error('Error generating images from GitHub:', error);
-      setError('Failed to load images. Please try again later.');
-    } finally {
-      setLoading(false);
-    }
+      // Brooklyn
+      { id: 17, image: `${githubBaseUrl}/Brooklyn/brooklyn-1.jpg`, alt: "Brooklyn - Living Room", location: "Brooklyn" },
+      { id: 18, image: `${githubBaseUrl}/Brooklyn/brooklyn-2.jpg`, alt: "Brooklyn - Bedroom", location: "Brooklyn" },
+      { id: 19, image: `${githubBaseUrl}/Brooklyn/brooklyn-3.jpg`, alt: "Brooklyn - Kitchen", location: "Brooklyn" },
+    ];
+    
+    setInteriorProjects(hardcodedImages);
+    setError(null);
+    setLoading(false);
   };
 
   // Sort images to ensure Brooklyn doesn't appear in first 10
@@ -97,7 +72,7 @@ const Interiors = () => {
 
   // Load images on component mount
   useEffect(() => {
-    generateImagesFromGitHub();
+    generateInteriorImages();
   }, []);
 
   // Show loading state
@@ -188,7 +163,7 @@ const Interiors = () => {
           <div className="text-center">
             <p className="text-red-500 font-light tracking-[0.1em] mb-4">{error}</p>
             <button 
-              onClick={generateImagesFromGitHub}
+              onClick={generateInteriorImages}
               className="px-6 py-2 border border-foreground text-foreground hover:bg-foreground hover:text-background transition-colors font-light tracking-[0.1em]"
             >
               Try Again
