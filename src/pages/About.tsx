@@ -58,7 +58,7 @@ We believe the interiors we inhabit—where we spend nearly 90% of our lives—s
               </p>
               
               {/* Image Placeholder */}
-              <div className="mt-16 mb-12 text-center">
+              <div className="text-center" style={{ marginTop: '100px', marginBottom: '100px' }}>
                 <img 
                   src="https://raw.githubusercontent.com/alexwes/buenos-aires-loft-nyc/refs/heads/main/public/images/about/tifi-hero.jpeg"
                   alt="Estefania with her son, Alexander, at Ashmolean museum in Oxford, UK"
