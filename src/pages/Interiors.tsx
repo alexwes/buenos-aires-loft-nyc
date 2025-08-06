@@ -275,15 +275,18 @@ const Interiors = () => {
           </div>
         </div>
       </section>
-      
-      {/* Fixed Quote at Bottom */}
-      <div className="fixed bottom-0 left-0 right-0 pb-[75px] px-6 pointer-events-none">
-        <div className="max-w-4xl mx-auto">
-          <blockquote className="text-center text-sm font-light leading-relaxed tracking-[0.1em] text-muted-foreground border-l-4 border-primary pl-6">
-            "If I could say it in words there would be no reason to paint." - Edward Hopper
-          </blockquote>
+
+      {/* Quote */}
+      <div className="py-16 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="max-w-4xl mx-auto">
+            <blockquote className="text-center text-sm font-light leading-relaxed tracking-[0.1em] text-muted-foreground border-l-4 border-primary pl-6">
+              "If I could say it in words there would be no reason to paint." - Edward Hopper
+            </blockquote>
+          </div>
         </div>
       </div>
+
     </div>
   );
 };
