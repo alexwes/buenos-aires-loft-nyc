@@ -50,7 +50,7 @@ const Contact = () => {
           <div className="max-w-4xl mx-auto text-center">
             <div className="space-y-12">
               {/* Contact Information */}
-              <div className="text-lg font-light tracking-[0.1em] text-foreground">
+              <div className="text-base font-light tracking-[0.1em] text-foreground">
                 For more information contact me at art@estefaniabustamante.com
               </div>
               
@@ -115,7 +115,7 @@ const Contact = () => {
               </div>
               
               {/* Quote */}
-              <blockquote className="text-center text-xl font-light tracking-[0.1em] text-muted-foreground border-l-4 border-primary pl-6 mt-16">
+              <blockquote className="text-center text-lg font-light tracking-[0.1em] text-muted-foreground border-l-4 border-primary pl-6 mt-16">
                 "Creativity takes courage." - Henri Matisse
               </blockquote>
             </div>

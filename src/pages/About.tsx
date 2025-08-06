@@ -48,7 +48,7 @@ const About = () => {
       <main className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-4xl mx-auto">
-            <div className="prose prose-lg max-w-none text-foreground space-y-6 font-light leading-relaxed">
+            <div className="prose max-w-none text-foreground space-y-6 font-light leading-relaxed text-sm">
               <p>
 Based in New York City, our boutique interior design and art consultancy studio offers a thoughtful, bespoke approach that transforms everyday spaces into something truly special.
               </p>
@@ -66,7 +66,7 @@ We believe the interiors we inhabit—where we spend nearly 90% of our lives—s
                 />
               </div>
               
-              <blockquote className="text-center text-xl font-light tracking-[0.1em] text-muted-foreground border-l-4 border-primary pl-6 my-8">
+              <blockquote className="text-center text-lg font-light tracking-[0.1em] text-muted-foreground border-l-4 border-primary pl-6 my-8">
                 "Art is a line around your thoughts." - Gustav Klimt
               </blockquote>
             </div>
