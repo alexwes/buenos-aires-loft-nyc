@@ -29,8 +29,8 @@ const Index = () => {
         
         {/* Text Overlay */}
         <div className="absolute inset-0 z-10 flex items-end justify-center pb-[10vh]">
-          <div className="text-center text-white flex flex-col items-center">
-            <h1 className="font-light tracking-[0.3em] font-sans whitespace-nowrap text-center" style={{ transform: 'scaleY(0.7)', fontSize: 'clamp(1rem, 3.5vw, 2.5rem)', lineHeight: '1', wordSpacing: '0.1em', maxWidth: '40vw' }}>
+          <div className="text-center text-white w-full flex flex-col items-center">
+            <h1 className="font-light tracking-[0.3em] font-sans whitespace-nowrap" style={{ transform: 'scaleY(0.7)', fontSize: 'clamp(1rem, 3.5vw, 2.5rem)', lineHeight: '1', wordSpacing: '0.1em' }}>
               ESTEFANIA INTERIORS
             </h1>
             <div className="flex items-center justify-center mt-4 mb-4">
