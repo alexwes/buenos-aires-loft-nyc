@@ -74,9 +74,6 @@ We believe the interiors we inhabit—where we spend nearly 90% of our lives—s
       <div className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-4xl mx-auto">
-            <blockquote className="text-center text-sm font-light leading-relaxed tracking-[0.1em] text-muted-foreground border-l-4 border-primary pl-6">
-              "Art is a line around your thoughts." - Gustav Klimt
-            </blockquote>
             <blockquote className="text-center text-sm font-light leading-relaxed tracking-[0.1em] text-muted-foreground">
               "Art is a line around your thoughts." - Gustav Klimt
             </blockquote>

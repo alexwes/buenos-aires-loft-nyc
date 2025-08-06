@@ -59,7 +59,7 @@ const Contact = () => {
                 <img 
                   src="https://raw.githubusercontent.com/alexwes/buenos-aires-loft-nyc/refs/heads/main/public/images/contact/pigeon.jpg"
                   alt="Estefania Bustamante"
-                  className="w-1/8 max-w-xs mx-auto rounded-lg shadow-lg"
+                  className="w-32 h-32 object-cover mx-auto rounded-lg shadow-lg"
                 />
               </div>
               
@@ -122,9 +122,6 @@ const Contact = () => {
       <div className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-4xl mx-auto">
-            <blockquote className="text-center text-sm font-light leading-relaxed tracking-[0.1em] text-muted-foreground border-l-4 border-primary pl-6">
-              "Creativity takes courage." - Henri Matisse
-            </blockquote>
             <blockquote className="text-center text-sm font-light leading-relaxed tracking-[0.1em] text-muted-foreground">
               "Creativity takes courage." - Henri Matisse
             </blockquote>
