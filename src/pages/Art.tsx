@@ -215,6 +215,13 @@ const Art = () => {
                     alt={artwork.alt}
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 px-4 bg-muted/30">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-4xl mx-auto">
