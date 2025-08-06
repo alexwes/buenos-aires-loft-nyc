@@ -29,7 +29,7 @@ const Index = () => {
         
         {/* Text Overlay */}
         <div className="absolute inset-0 z-10 flex items-end justify-center pb-[10vh]">
-          <div className="text-center text-white">
+          <div className="text-center text-white flex flex-col items-center">
             <h1 className="font-light tracking-[0.3em] font-sans whitespace-nowrap text-center mx-auto" style={{ transform: 'scaleY(0.7)', fontSize: 'clamp(1rem, 3.5vw, 2.5rem)', width: '40vw', lineHeight: '1', wordSpacing: '0.1em' }}>
               ESTEFANIA INTERIORS
             </h1>
