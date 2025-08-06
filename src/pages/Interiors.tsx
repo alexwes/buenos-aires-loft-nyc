@@ -21,11 +21,7 @@ const Interiors = () => {
   const fetchDirectoryContents = async (path = '') => {
     try {
       const url = path ? `${githubApiUrl}/${path}` : githubApiUrl;
-      const headers = {};
-      if (import.meta.env.VITE_GITHUB_TOKEN) {
-        headers['Authorization'] = `token ${import.meta.env.VITE_GITHUB_TOKEN}`;
-      }
-      const response = await fetch(url, { headers });
+      const response = await fetch(url);
       
       if (!response.ok) {
         throw new Error(`Failed to fetch directory: ${response.status}`);
