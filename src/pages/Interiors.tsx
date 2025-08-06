@@ -10,7 +10,7 @@ const Interiors = () => {
   const navItems = [
     { name: "INTERIORS", path: "/interiors" },
     { name: "ART", path: "/art" },
-    { name: "BIO", path: "/about" },
+    { name: "ABOUT", path: "/about" },
     { name: "CONTACT", path: "/contact" },
   ];
 
