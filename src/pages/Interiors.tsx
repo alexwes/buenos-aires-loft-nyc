@@ -264,20 +264,6 @@ const Interiors = () => {
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-end">
-                    <div className="p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <p className="text-sm font-light tracking-[0.1em]">{formatLocationText(project.location)}</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Quote */}
-      <div className="py-16 px-6">
-        <div className="max-w-7xl mx-auto">
           <div className="max-w-4xl mx-auto">
             <blockquote className="text-center text-sm font-light leading-relaxed tracking-[0.1em] text-muted-foreground border-l-4 border-primary pl-6">
               "If I could say it in words there would be no reason to paint." - Edward Hopper
