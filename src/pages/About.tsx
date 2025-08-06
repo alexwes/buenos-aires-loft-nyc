@@ -59,6 +59,12 @@ We believe the interiors we inhabit—where we spend nearly 90% of our lives—s
               
               {/* Image Placeholder */}
               <div className="text-center" style={{ marginTop: '100px', marginBottom: '100px' }}>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
       {/* Quote at bottom */}
       <div className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
