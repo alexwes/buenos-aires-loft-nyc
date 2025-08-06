@@ -226,6 +226,8 @@ const Art = () => {
       </section>
 
       {/* Quote Section */}
+    </div>
+  );
 };
 
 export default Art;
