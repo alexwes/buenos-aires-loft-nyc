@@ -9,7 +9,7 @@ const Art = () => {
   const navItems = [
     { name: "INTERIORS", path: "/interiors" },
     { name: "ART", path: "/art" },
-    { name: "ABOUT", path: "/about" },
+    { name: "BIO", path: "/about" },
     { name: "CONTACT", path: "/contact" },
   ];
 
