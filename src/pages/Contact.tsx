@@ -115,7 +115,7 @@ const Contact = () => {
               </div>
               
               {/* Quote */}
-              <blockquote className="text-center text-lg font-light tracking-[0.1em] text-muted-foreground border-l-4 border-primary pl-6 mt-16">
+              <blockquote className="text-center text-sm font-light leading-relaxed tracking-[0.1em] text-muted-foreground border-l-4 border-primary pl-6 mt-16">
                 "Creativity takes courage." - Henri Matisse
               </blockquote>
             </div>
