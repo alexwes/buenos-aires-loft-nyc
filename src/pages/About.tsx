@@ -50,19 +50,11 @@ const About = () => {
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-lg max-w-none text-foreground space-y-6 font-light leading-relaxed">
               <p>
-                Growing up with an artist mother and a lawyer turned-to-finance father Estefania was always deeply immersed in the visual arts and finance worlds. Since 2001 Estefania has worked with art galleries, collectors, designers, dealers and artists in the US, Argentina and Europe, in both creative and administration roles, assisting sales, catalogue and book publications, exhibitions, and transportation. Works of the artists she acquired years ago have become part of the MoMA NY and other leading museum collections around the world. A work she owned was on loan and exhibited for several years at MALBA Museum of Argentina, and other work of her collection was loaned for temporary exhibition.
+Based in New York City, our boutique interior design and art consultancy studio offers a thoughtful, bespoke approach that transforms everyday spaces into something truly special.
               </p>
               
               <p>
-                Estefania was a trend spotter in Buenos Aires for Mediaset, Italy's largest media conglomerate, from 1998 to 2003. Her responsibilities included identifying, reporting and contextualizing emerging trends in architecture, art, music and design as well as fashion. She reported to the management of the Corporate Research and Development Department in Milan.
-              </p>
-              
-              <p>
-                Estefania has been a collector of Latin American modern geometric art, and her collection includes works by Tomas Maldonado, Lidy Prati, and Alfredo Hlito among others. Estefania is an advisory member at the Museum of Fine Arts of Argentina and has served as New York vice chair of Bienalsur, International biennial of Contemporary Art. Artists such as Enio Iommi, Martin Blaszko and Juan Mele were frequent visitors to her home in Buenos Aires.
-              </p>
-              
-              <p>
-                While in her last year of college, Estefania became the founder and partner of Foco Diseno. A design company that for five years, until she left Argentina to study in New York, provided comprehensive design services to high profile corporate clients including leading hotels, beauty services companies, manufacturers, law firms and investment banks. She did design, art and advertising coursework at Parsons School of Design and NYU in New York after graduating in 1994 from Universidad de Palermo in Buenos Aires with a degree in Design. She is the mother of two children and lives and works in Manhattan, New York.
+We believe the interiors we inhabit—where we spend nearly 90% of our lives—should reflect who we are, inspire how we live, and elevate the everyday. Our work is guided by proportion, balance, and a deep appreciation for beauty and individuality. Whether crafting a home from the ground up or reimagining a single room, we create interiors with clean lines, intentional details, and eclectic sophistication. On the art side, we advise seasoned collectors in search of the perfect piece, as well as newcomers navigating the thrilling (and sometimes daunting) world of art collecting—always with warmth, taste, and discernment.
               </p>
               
               {/* Image Placeholder */}
