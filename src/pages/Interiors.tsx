@@ -256,17 +256,15 @@ const Interiors = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {sortedProjects.map((project) => (
-              <div key={project.id} className="group cursor-pointer">
-                <div className="aspect-square overflow-hidden bg-muted">
-                  <img
-                    src={project.image}
+              <div key={project.id} className="group relative overflow-hidden rounded-lg shadow-lg">
+                <div className="aspect-[4/3] relative">
+                  <img 
+                    src={project.image} 
                     alt={project.alt}
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
-                </div>
-                <div className="mt-4">
-                  <div className="text-center">
-                    <div className="space-y-1">
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-end">
+                    <div className="p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <h3 className="text-lg font-light tracking-[0.1em]">{formatLocationText(project.location)}</h3>
                     </div>
                   </div>
