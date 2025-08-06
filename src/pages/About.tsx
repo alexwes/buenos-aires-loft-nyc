@@ -11,7 +11,7 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background flex flex-col">
       {/* Header */}
       <header className="border-b border-border">
         <div className="max-w-7xl mx-auto px-6 py-6">
@@ -45,7 +45,7 @@ const About = () => {
       </header>
 
       {/* Main Content Area */}
-      <main className="py-16 px-6">
+      <main className="py-16 px-6 flex-1">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-4xl mx-auto">
             <div className="prose max-w-none text-foreground space-y-6 font-light leading-relaxed text-sm">
@@ -65,14 +65,21 @@ We believe the interiors we inhabit—where we spend nearly 90% of our lives—s
                   className="w-full max-w-2xl mx-auto rounded-lg shadow-lg mb-4"
                 />
               </div>
-              
-              <blockquote className="text-center text-lg font-light tracking-[0.1em] text-muted-foreground border-l-4 border-primary pl-6 my-8">
-                <span className="text-sm font-light leading-relaxed">"Art is a line around your thoughts." - Gustav Klimt</span>
-              </blockquote>
             </div>
           </div>
         </div>
       </main>
+      
+      {/* Quote at bottom */}
+      <div className="py-16 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="max-w-4xl mx-auto">
+            <blockquote className="text-center text-sm font-light leading-relaxed tracking-[0.1em] text-muted-foreground border-l-4 border-primary pl-6">
+              "Art is a line around your thoughts." - Gustav Klimt
+            </blockquote>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

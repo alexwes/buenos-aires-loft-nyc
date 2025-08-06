@@ -11,7 +11,7 @@ const Contact = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background flex flex-col">
       {/* Header */}
       <header className="border-b border-border">
         <div className="max-w-7xl mx-auto px-6 py-6">
@@ -45,7 +45,7 @@ const Contact = () => {
       </header>
 
       {/* Main Content Area */}
-      <main className="py-16 px-6">
+      <main className="py-16 px-6 flex-1">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-4xl mx-auto text-center">
             <div className="space-y-12">
@@ -113,15 +113,21 @@ const Contact = () => {
                   </svg>
                 </a>
               </div>
-              
-              {/* Quote */}
-              <blockquote className="text-center text-sm font-light leading-relaxed tracking-[0.1em] text-muted-foreground border-l-4 border-primary pl-6 mt-16">
-                "Creativity takes courage." - Henri Matisse
-              </blockquote>
             </div>
           </div>
         </div>
       </main>
+      
+      {/* Quote at bottom */}
+      <div className="py-16 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="max-w-4xl mx-auto">
+            <blockquote className="text-center text-sm font-light leading-relaxed tracking-[0.1em] text-muted-foreground border-l-4 border-primary pl-6">
+              "Creativity takes courage." - Henri Matisse
+            </blockquote>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
