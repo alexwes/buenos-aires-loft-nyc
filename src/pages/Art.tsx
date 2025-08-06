@@ -1,10 +1,10 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 
-const Interiors = () => {
+const Art = () => {
   const location = useLocation();
-  const githubBaseUrl = "https://raw.githubusercontent.com/alexwes/buenos-aires-loft-nyc/refs/heads/main/public/images/interiors";
-  const githubApiUrl = "https://api.github.com/repos/alexwes/buenos-aires-loft-nyc/contents/public/images/interiors";
+  const githubBaseUrl = "https://raw.githubusercontent.com/alexwes/buenos-aires-loft-nyc/refs/heads/main/public/images/art";
+  const githubApiUrl = "https://api.github.com/repos/alexwes/buenos-aires-loft-nyc/contents/public/images/art";
 
   const navItems = [
     { name: "INTERIORS", path: "/interiors" },
@@ -13,91 +13,62 @@ const Interiors = () => {
     { name: "CONTACT", path: "/contact" },
   ];
 
-  const [interiorProjects, setInteriorProjects] = useState([]);
+  const [artworks, setArtworks] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Fetch directory contents from GitHub API
-  const fetchDirectoryContents = async (path = '') => {
-    try {
-      const url = path ? `${githubApiUrl}/${path}` : githubApiUrl;
-      const response = await fetch(url);
-      
-      if (!response.ok) {
-        throw new Error(`Failed to fetch directory: ${response.status}`);
-      }
-      
-      return await response.json();
-    } catch (error) {
-      console.error('Error fetching directory:', error);
-      throw error;
-    }
-  };
-
-  // Generate all images dynamically from GitHub
-  const generateImagesFromGitHub = async () => {
+  // Generate all art images dynamically from GitHub
+  const generateArtworksFromGitHub = async () => {
     try {
       setLoading(true);
-      const allImages = [];
-      let imageId = 1;
+      const allArtworks = [];
+      let artworkId = 1;
       
-      // Get all directories in the interiors folder
-      const directories = await fetchDirectoryContents();
+      // Get all files in the art directory
+      const response = await fetch(githubApiUrl);
       
-      // Filter for directories only
-      const imageDirs = directories.filter(item => item.type === 'dir');
-      
-      // For each directory, get its contents
-      for (const dir of imageDirs) {
-        try {
-          const files = await fetchDirectoryContents(dir.name);
-          
-          // Filter for image files only
-          const imageFiles = files.filter(file => 
-            file.type === 'file' && 
-            /\.(jpg|jpeg|png|gif|webp)$/i.test(file.name)
-          );
-          
-          // Add each image to our collection
-          imageFiles.forEach(file => {
-            allImages.push({
-              id: imageId++,
-              image: `${githubBaseUrl}/${dir.name}/${file.name}`,
-              alt: `${dir.name} - ${file.name.split('.')[0].replace(/-/g, ' ')}`,
-              location: dir.name
-            });
-          });
-        } catch (dirError) {
-          console.error(`Error fetching files from ${dir.name}:`, dirError);
-        }
+      if (!response.ok) {
+        throw new Error(`Failed to fetch art directory: ${response.status}`);
       }
       
-      setInteriorProjects(allImages);
+      const files = await response.json();
+      
+      // Filter for image files only
+      const imageFiles = files.filter(file => 
+        file.type === 'file' && 
+        /\.(jpg|jpeg|png|gif|webp)$/i.test(file.name)
+      );
+      
+      // Add each image to our collection
+      imageFiles.forEach(file => {
+        // Extract artist name from filename (remove extension and format)
+        const artistName = file.name
+          .split('.')[0] // Remove extension
+          .replace(/-\d+$/, '') // Remove trailing numbers like -2, -3
+          .replace(/-/g, ' ') // Replace hyphens with spaces
+          .toUpperCase(); // Convert to uppercase
+        
+        allArtworks.push({
+          id: artworkId++,
+          image: `${githubBaseUrl}/${file.name}`,
+          alt: `Artwork by ${artistName}`,
+          artist: artistName
+        });
+      });
+      
+      setArtworks(allArtworks);
       setError(null);
     } catch (error) {
-      console.error('Error generating images from GitHub:', error);
-      setError('Failed to load images. Please try again later.');
+      console.error('Error generating artworks from GitHub:', error);
+      setError('Failed to load artworks. Please try again later.');
     } finally {
       setLoading(false);
     }
   };
 
-  // Sort images to ensure Brooklyn doesn't appear in first 10
-  const sortedProjects = interiorProjects.sort((a, b) => {
-    // If one is Brooklyn and the other isn't, Brooklyn goes later
-    const aIsBrooklyn = a.location.toLowerCase().includes('brooklyn');
-    const bIsBrooklyn = b.location.toLowerCase().includes('brooklyn');
-    
-    if (aIsBrooklyn && !bIsBrooklyn) return 1;
-    if (!aIsBrooklyn && bIsBrooklyn) return -1;
-    
-    // Otherwise maintain original order
-    return 0;
-  });
-
-  // Load images on component mount
+  // Load artworks on component mount
   useEffect(() => {
-    generateImagesFromGitHub();
+    generateArtworksFromGitHub();
   }, []);
 
   // Show loading state
@@ -140,7 +111,7 @@ const Interiors = () => {
         <div className="flex items-center justify-center min-h-[60vh]">
           <div className="text-center">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-foreground mx-auto mb-4"></div>
-            <p className="text-muted-foreground font-light tracking-[0.1em]">Loading images...</p>
+            <p className="text-muted-foreground font-light tracking-[0.1em]">Loading artworks...</p>
           </div>
         </div>
       </div>
@@ -188,7 +159,7 @@ const Interiors = () => {
           <div className="text-center">
             <p className="text-red-500 font-light tracking-[0.1em] mb-4">{error}</p>
             <button 
-              onClick={generateImagesFromGitHub}
+              onClick={generateArtworksFromGitHub}
               className="px-6 py-2 border border-foreground text-foreground hover:bg-foreground hover:text-background transition-colors font-light tracking-[0.1em]"
             >
               Try Again
@@ -198,25 +169,6 @@ const Interiors = () => {
       </div>
     );
   }
-
-  // Function to format location text for display
-  const formatLocationText = (location) => {
-    if (location.includes('79th')) {
-      return 'UPPER EAST SIDE, 79th Street';
-    } else if (location.includes('90th')) {
-      return 'UPPER EAST SIDE, 90th Street';
-    } else if (location === 'Upper East Side') {
-      return 'UPPER EAST SIDE';
-    } else if (location === 'Manhattan West Side') {
-      return 'MANHATTAN WEST SIDE';
-    } else if (location === 'Buenos Aires') {
-      return 'BUENOS AIRES';
-    } else if (location === 'Brooklyn') {
-      return 'BROOKLYN';
-    }
-    return location.toUpperCase();
-  };
-
   return (
     <div className="min-h-screen bg-background flex flex-col">
       {/* Header */}
@@ -251,26 +203,38 @@ const Interiors = () => {
         </div>
       </header>
 
-      {/* Interiors Gallery */}
+      {/* Art Gallery */}
       <section className="py-16 px-4 flex-1">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {sortedProjects.map((project) => (
-              <div key={project.id} className="group relative overflow-hidden rounded-lg shadow-lg">
+            {artworks.map((artwork) => (
+              <div key={artwork.id} className="group relative overflow-hidden rounded-lg shadow-lg">
                 <div className="aspect-[4/3] relative">
                   <img 
-                    src={project.image} 
-                    alt={project.alt}
+                    src={artwork.image}
+                    alt={artwork.alt}
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-end">
-                    <div className="p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <h3 className="text-lg font-light tracking-[0.1em]">{formatLocationText(project.location)}</h3>
-                    </div>
-                  </div>
+                </div>
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+                  <p className="text-white text-sm font-light tracking-[0.1em]">{artwork.artist}</p>
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Quote Section */}
+      <section className="py-16 px-4 bg-muted/30">
+        <div className="max-w-7xl mx-auto">
+          <div className="max-w-4xl mx-auto">
+            <blockquote className="text-center text-sm font-light leading-relaxed tracking-[0.1em] text-muted-foreground border-l-4 border-primary pl-6">
+              "Make it simple, but significant." - Don Draper
+            </blockquote>
+            <blockquote className="text-center text-sm font-light leading-relaxed tracking-[0.1em] text-muted-foreground">
+              "Make it simple, but significant." - Don Draper
+            </blockquote>
           </div>
         </div>
       </section>
@@ -278,4 +242,4 @@ const Interiors = () => {
   );
 };
 
-export default Interiors;
+export default Art;
