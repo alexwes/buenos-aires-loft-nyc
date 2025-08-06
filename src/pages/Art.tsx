@@ -25,7 +25,11 @@ const Art = () => {
       let artworkId = 1;
       
       // Get all files in the art directory
-      const response = await fetch(githubApiUrl);
+      const headers = {};
+      if (import.meta.env.VITE_GITHUB_TOKEN) {
+        headers['Authorization'] = `token ${import.meta.env.VITE_GITHUB_TOKEN}`;
+      }
+      const response = await fetch(githubApiUrl, { headers });
       
       if (!response.ok) {
         throw new Error(`Failed to fetch art directory: ${response.status}`);
