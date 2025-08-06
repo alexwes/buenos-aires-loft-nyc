@@ -280,7 +280,6 @@ const Interiors = () => {
         <div className="max-w-4xl mx-auto">
           <blockquote className="text-center text-sm font-light leading-relaxed tracking-[0.1em] text-muted-foreground">
             "If I could say it in words there would be no reason to paint." - Edward Hopper
-            "If I could say it in words there would be no reason to paint." - Edward Hopper
           </blockquote>
         </div>
       </section>
