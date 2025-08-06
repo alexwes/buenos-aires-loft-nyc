@@ -17,30 +17,58 @@ const Art = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Hardcoded list of art images to avoid GitHub API rate limits
-  const generateArtworks = () => {
-    setLoading(true);
-    
-    const hardcodedArtworks = [
-      { id: 1, image: `${githubBaseUrl}/picasso-1.jpg`, alt: "Artwork by PICASSO", artist: "PICASSO" },
-      { id: 2, image: `${githubBaseUrl}/monet-1.jpg`, alt: "Artwork by MONET", artist: "MONET" },
-      { id: 3, image: `${githubBaseUrl}/van-gogh-1.jpg`, alt: "Artwork by VAN GOGH", artist: "VAN GOGH" },
-      { id: 4, image: `${githubBaseUrl}/dali-1.jpg`, alt: "Artwork by DALI", artist: "DALI" },
-      { id: 5, image: `${githubBaseUrl}/kandinsky-1.jpg`, alt: "Artwork by KANDINSKY", artist: "KANDINSKY" },
-      { id: 6, image: `${githubBaseUrl}/matisse-1.jpg`, alt: "Artwork by MATISSE", artist: "MATISSE" },
-      { id: 7, image: `${githubBaseUrl}/pollock-1.jpg`, alt: "Artwork by POLLOCK", artist: "POLLOCK" },
-      { id: 8, image: `${githubBaseUrl}/warhol-1.jpg`, alt: "Artwork by WARHOL", artist: "WARHOL" },
-      { id: 9, image: `${githubBaseUrl}/rothko-1.jpg`, alt: "Artwork by ROTHKO", artist: "ROTHKO" },
-    ];
-    
-    setArtworks(hardcodedArtworks);
-    setError(null);
-    setLoading(false);
+  // Generate all art images dynamically from GitHub
+  const generateArtworksFromGitHub = async () => {
+    try {
+      setLoading(true);
+      const allArtworks = [];
+      let artworkId = 1;
+      
+      // Get all files in the art directory
+      const response = await fetch(githubApiUrl);
+      
+      if (!response.ok) {
+        throw new Error(`Failed to fetch art directory: ${response.status}`);
+      }
+      
+      const files = await response.json();
+      
+      // Filter for image files only
+      const imageFiles = files.filter(file => 
+        file.type === 'file' && 
+        /\.(jpg|jpeg|png|gif|webp)$/i.test(file.name)
+      );
+      
+      // Add each image to our collection
+      imageFiles.forEach(file => {
+        // Extract artist name from filename (remove extension and format)
+        const artistName = file.name
+          .split('.')[0] // Remove extension
+          .replace(/-\d+$/, '') // Remove trailing numbers like -2, -3
+          .replace(/-/g, ' ') // Replace hyphens with spaces
+          .toUpperCase(); // Convert to uppercase
+        
+        allArtworks.push({
+          id: artworkId++,
+          image: `${githubBaseUrl}/${file.name}`,
+          alt: `Artwork by ${artistName}`,
+          artist: artistName
+        });
+      });
+      
+      setArtworks(allArtworks);
+      setError(null);
+    } catch (error) {
+      console.error('Error generating artworks from GitHub:', error);
+      setError('Failed to load artworks. Please try again later.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   // Load artworks on component mount
   useEffect(() => {
-    generateArtworks();
+    generateArtworksFromGitHub();
   }, []);
 
   // Show loading state
@@ -131,7 +159,7 @@ const Art = () => {
           <div className="text-center">
             <p className="text-red-500 font-light tracking-[0.1em] mb-4">{error}</p>
             <button 
-              onClick={generateArtworks}
+              onClick={generateArtworksFromGitHub}
               className="px-6 py-2 border border-foreground text-foreground hover:bg-foreground hover:text-background transition-colors font-light tracking-[0.1em]"
             >
               Try Again
