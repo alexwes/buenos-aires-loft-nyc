@@ -255,6 +255,18 @@ const Interiors = () => {
       <section className="py-16 px-4 flex-1">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {sortedProjects.map((project) => (
+              <div key={project.id} className="group cursor-pointer">
+                <div className="aspect-square overflow-hidden bg-muted">
+                  <img
+                    src={project.image}
+                    alt={project.alt}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+                <div className="mt-4">
+                  <div className="text-center">
+                    <div className="space-y-1">
                       <h3 className="text-lg font-light tracking-[0.1em]">{formatLocationText(project.location)}</h3>
                     </div>
                   </div>
