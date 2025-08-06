@@ -261,7 +261,7 @@ const Interiors = () => {
                   <img 
                     src={project.image} 
                     alt={project.alt}
-                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-200"
+                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-[2]"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 flex items-end">
                     <div className="p-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
