@@ -25,7 +25,11 @@ const Art = () => {
       let artworkId = 1;
       
       // Get all files in the art directory
-      const response = await fetch(githubApiUrl);
+      const response = await fetch(githubApiUrl, {
+        headers: {
+          'User-Agent': 'Estefania-Interiors-App'
+        }
+      });
       
       if (!response.ok) {
         throw new Error(`Failed to fetch art directory: ${response.status}`);
