@@ -48,7 +48,7 @@ const About = () => {
       <main className="py-6 px-6 flex-1">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-4xl mx-auto">
-            <div className="prose max-w-none text-foreground space-y-6 font-light leading-relaxed text-[10px]">
+            <div className="prose max-w-none text-foreground space-y-6 font-light leading-loose text-[11px]">
               <p>
 Based in New York City, our boutique interior design and art consultancy studio offers a thoughtful, bespoke approach that transforms everyday spaces into something truly special.
               </p>

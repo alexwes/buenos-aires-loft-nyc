@@ -50,7 +50,7 @@ const Contact = () => {
           <div className="max-w-4xl mx-auto text-center">
             <div className="space-y-12">
               {/* Contact Information */}
-              <div className="text-[10px] font-light tracking-[0.1em] text-foreground">
+              <div className="text-[11px] font-light tracking-[0.1em] text-foreground leading-loose">
                 For more information contact me at art@estefaniabustamante.com
               </div>
               
