@@ -1,12 +1,17 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Index = () => {
   const githubBaseUrl = "https://raw.githubusercontent.com/alexwes/buenos-aires-loft-nyc/refs/heads/main/public";
+  const navigate = useNavigate();
+
+  const handlePageClick = () => {
+    navigate("/interiors");
+  };
   
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background cursor-pointer" onClick={handlePageClick}>
       {/* Hero Section */}
       <section className="relative h-screen">
         {/* Background Image */}
