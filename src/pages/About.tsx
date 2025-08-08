@@ -62,7 +62,7 @@ We believe the interiors we inhabit—where we spend nearly 90% of our lives—s
                 <img 
                   src="https://raw.githubusercontent.com/alexwes/buenos-aires-loft-nyc/refs/heads/main/public/images/about/tifi-hero.jpeg"
                   alt="Estefania Bustamante"
-                  className="mx-auto rounded-lg shadow-lg max-w-md w-full object-cover"
+                  className="mx-auto rounded-lg max-w-md w-full object-cover"
                 />
               </div>
             </div>

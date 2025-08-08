@@ -208,7 +208,7 @@ const Art = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {artworks.map((artwork) => (
-              <div key={artwork.id} className="group relative overflow-hidden rounded-lg shadow-lg">
+              <div key={artwork.id} className="group relative overflow-hidden rounded-lg">
                 <div className="aspect-[4/3] relative">
                   <img 
                     src={artwork.image}
