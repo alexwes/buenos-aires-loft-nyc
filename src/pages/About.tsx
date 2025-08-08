@@ -45,7 +45,7 @@ const About = () => {
       </header>
 
       {/* Main Content Area */}
-      <main className="py-16 px-6 flex-1">
+      <main className="py-6 px-6 flex-1">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-4xl mx-auto">
             <div className="prose max-w-none text-foreground space-y-6 font-light leading-relaxed text-sm">

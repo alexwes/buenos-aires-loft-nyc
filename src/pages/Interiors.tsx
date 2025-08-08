@@ -120,7 +120,7 @@ const Interiors = () => {
         </header>
 
         {/* Loading State */}
-        <div className="flex items-center justify-center min-h-[60vh]">
+        <div className="flex items-center justify-center min-h-[60vh] pt-6">
           <div className="text-center">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-foreground mx-auto mb-4"></div>
             <p className="text-muted-foreground font-light tracking-[0.1em]">Loading images...</p>
@@ -167,7 +167,7 @@ const Interiors = () => {
         </header>
 
         {/* Error State */}
-        <div className="flex items-center justify-center min-h-[60vh]">
+        <div className="flex items-center justify-center min-h-[60vh] pt-6">
           <div className="text-center">
             <p className="text-red-500 font-light tracking-[0.1em] mb-4">{error}</p>
             <button 
@@ -235,7 +235,7 @@ const Interiors = () => {
       </header>
 
       {/* Interiors Gallery */}
-      <section className="py-16 px-4 flex-1">
+      <section className="py-6 px-4 flex-1">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {sortedProjects.map((project) => (

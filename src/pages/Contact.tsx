@@ -45,7 +45,7 @@ const Contact = () => {
       </header>
 
       {/* Main Content Area */}
-      <main className="py-16 px-6 flex-1">
+      <main className="py-6 px-6 flex-1">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-4xl mx-auto text-center">
             <div className="space-y-12">
