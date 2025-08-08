@@ -56,9 +56,14 @@ Based in New York City, our boutique interior design and art consultancy studio 
               <p>
 We believe the interiors we inhabit—where we spend nearly 90% of our lives—should reflect who we are, inspire how we live, and elevate the everyday. Our work is guided by proportion, balance, and a deep appreciation for beauty and individuality. Whether crafting a home from the ground up or reimagining a single room, we create interiors with clean lines, intentional details, and eclectic sophistication. On the art side, we advise seasoned collectors in search of the perfect piece, as well as newcomers navigating the thrilling (and sometimes daunting) world of art collecting—always with warmth, taste, and discernment.
               </p>
-              
-              {/* Image Placeholder */}
-              <div className="text-center" style={{ marginTop: '100px', marginBottom: '100px' }}>
+
+              {/* About Image */}
+              <div className="text-center my-16">
+                <img 
+                  src="https://raw.githubusercontent.com/alexwes/buenos-aires-loft-nyc/refs/heads/main/public/images/about/tifi-hero.jpeg"
+                  alt="Estefania Bustamante"
+                  className="mx-auto rounded-lg shadow-lg max-w-md w-full object-cover"
+                />
               </div>
             </div>
           </div>
