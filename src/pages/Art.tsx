@@ -206,14 +206,14 @@ const Art = () => {
       {/* Art Gallery */}
       <section className="py-6 px-4 flex-1">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {artworks.map((artwork) => (
               <div key={artwork.id} className="group relative overflow-hidden rounded-lg">
-                <div className="aspect-[4/3] relative">
+                <div className="relative">
                   <img 
                     src={artwork.image}
                     alt={artwork.alt}
-                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    className="w-full h-auto object-contain transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
