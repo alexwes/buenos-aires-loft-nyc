@@ -30,7 +30,7 @@ const Portfolio = () => {
                     <li key={item.path}>
                       <Link
                         to={item.path}
-                        className={`text-xs font-light tracking-[0.2em] transition-colors ${
+                        className={`text-[10px] font-light tracking-[0.2em] transition-colors ${
                           location.pathname === item.path
                             ? "text-foreground border-b-2 border-foreground pb-1"
                             : "text-muted-foreground hover:text-foreground"
