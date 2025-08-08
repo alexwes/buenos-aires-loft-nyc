@@ -122,7 +122,7 @@ const Contact = () => {
       <div className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-4xl mx-auto">
-            <blockquote className="text-center text-sm font-light text-muted-foreground">
+            <blockquote className="text-center text-[11px] font-light leading-loose tracking-[0.1em] text-muted-foreground">
               "Creativity takes courage." - Henri Matisse
             </blockquote>
           </div>
