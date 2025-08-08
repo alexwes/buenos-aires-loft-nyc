@@ -46,31 +46,6 @@ const Portfolio = () => {
           </div>
         </div>
       </header>
-              <ul className="flex space-x-8">
-                {navItems.map((item) => (
-                  <li key={item.path}>
-                    <Link
-                      to={item.path}
-                      className={`text-sm font-light tracking-[0.2em] transition-colors ${
-                        location.pathname === item.path
-                          ? "text-foreground border-b-2 border-foreground pb-1"
-                          : "text-muted-foreground hover:text-foreground"
-                      }`}
-                    >
-                      {item.name}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-
-            {/* Logo */}
-            <Link to="/" className="flex items-center space-x-4">
-              <span className="text-sm font-light tracking-[0.3em] font-sans" style={{ transform: 'scaleY(0.7)' }}>ESTEFANIA INTERIORS</span>
-            </Link>
-          </div>
-        </div>
-      </header>
 
       {/* Main Content Area */}
       <main className="py-16 px-6">
