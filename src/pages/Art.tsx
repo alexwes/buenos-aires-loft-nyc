@@ -78,9 +78,14 @@ const Art = () => {
         {/* Header */}
         <header className="border-b border-border">
           <div className="max-w-7xl mx-auto px-6 py-6">
-            <div className="flex justify-between items-center">
+            <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+              {/* Logo - appears first on mobile */}
+              <Link to="/" className="flex items-center space-x-4 order-1 md:order-2">
+                <span className="text-sm font-light tracking-[0.3em] font-sans" style={{ transform: 'scaleY(0.7)' }}>ESTEFANIA INTERIORS</span>
+              </Link>
+
               {/* Navigation */}
-              <nav>
+              <nav className="order-2 md:order-1">
                 <ul className="flex space-x-8">
                   {navItems.map((item) => (
                     <li key={item.path}>
@@ -98,11 +103,6 @@ const Art = () => {
                   ))}
                 </ul>
               </nav>
-
-              {/* Logo */}
-              <Link to="/" className="flex items-center space-x-4">
-                <span className="text-sm font-light tracking-[0.3em] font-sans" style={{ transform: 'scaleY(0.7)' }}>ESTEFANIA INTERIORS</span>
-              </Link>
             </div>
           </div>
         </header>
@@ -125,9 +125,14 @@ const Art = () => {
         {/* Header */}
         <header className="border-b border-border">
           <div className="max-w-7xl mx-auto px-6 py-6">
-            <div className="flex justify-between items-center">
+            <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+              {/* Logo - appears first on mobile */}
+              <Link to="/" className="flex items-center space-x-4 order-1 md:order-2">
+                <span className="text-sm font-light tracking-[0.3em] font-sans" style={{ transform: 'scaleY(0.7)' }}>ESTEFANIA INTERIORS</span>
+              </Link>
+
               {/* Navigation */}
-              <nav>
+              <nav className="order-2 md:order-1">
                 <ul className="flex space-x-8">
                   {navItems.map((item) => (
                     <li key={item.path}>
@@ -145,11 +150,6 @@ const Art = () => {
                   ))}
                 </ul>
               </nav>
-
-              {/* Logo */}
-              <Link to="/" className="flex items-center space-x-4">
-                <span className="text-sm font-light tracking-[0.3em] font-sans" style={{ transform: 'scaleY(0.7)' }}>ESTEFANIA INTERIORS</span>
-              </Link>
             </div>
           </div>
         </header>
@@ -174,9 +174,14 @@ const Art = () => {
       {/* Header */}
       <header className="border-b border-border">
         <div className="max-w-7xl mx-auto px-6 py-6">
-          <div className="flex justify-between items-center">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            {/* Logo - appears first on mobile */}
+            <Link to="/" className="flex items-center space-x-4 order-1 md:order-2">
+              <span className="text-sm font-light tracking-[0.3em] font-sans" style={{ transform: 'scaleY(0.7)' }}>ESTEFANIA INTERIORS</span>
+            </Link>
+
             {/* Navigation */}
-            <nav>
+            <nav className="order-2 md:order-1">
               <ul className="flex space-x-8">
                 {navItems.map((item) => (
                   <li key={item.path}>
@@ -194,11 +199,6 @@ const Art = () => {
                 ))}
               </ul>
             </nav>
-
-            {/* Logo */}
-            <Link to="/" className="flex items-center space-x-4">
-              <span className="text-sm font-light tracking-[0.3em] font-sans" style={{ transform: 'scaleY(0.7)' }}>ESTEFANIA INTERIORS</span>
-            </Link>
           </div>
         </div>
       </header>
