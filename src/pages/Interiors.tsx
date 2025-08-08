@@ -3,8 +3,8 @@ import { useState, useEffect } from "react";
 
 const Interiors = () => {
   const location = useLocation();
-  const githubBaseUrl = "https://raw.githubusercontent.com/alexwes/buenos-aires-loft-nyc/refs/heads/main/public/images/interiors";
-  const githubApiUrl = "https://api.github.com/repos/alexwes/buenos-aires-loft-nyc/contents/public/images/interiors";
+  const githubBaseUrl = "https://raw.githubusercontent.com/alexwes/buenos-aires-loft-nyc/main";
+  const githubApiUrl = "https://api.github.com/repos/alexwes/buenos-aires-loft-nyc/git/trees/main?recursive=1";
 
   const navItems = [
     { name: "INTERIORS", path: "/interiors" },
@@ -17,23 +17,6 @@ const Interiors = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  // Fetch directory contents from GitHub API
-  const fetchDirectoryContents = async (path = '') => {
-    try {
-      const url = path ? `${githubApiUrl}/${path}` : githubApiUrl;
-      const response = await fetch(url);
-      
-      if (!response.ok) {
-        throw new Error(`Failed to fetch directory: ${response.status}`);
-      }
-      
-      return await response.json();
-    } catch (error) {
-      console.error('Error fetching directory:', error);
-      throw error;
-    }
-  };
-
   // Generate all images dynamically from GitHub
   const generateImagesFromGitHub = async () => {
     try {
@@ -41,36 +24,36 @@ const Interiors = () => {
       const allImages = [];
       let imageId = 1;
       
-      // Get all directories in the interiors folder
-      const directories = await fetchDirectoryContents();
+      // Get the entire repository tree in a single request
+      const response = await fetch(githubApiUrl);
       
-      // Filter for directories only
-      const imageDirs = directories.filter(item => item.type === 'dir');
-      
-      // For each directory, get its contents
-      for (const dir of imageDirs) {
-        try {
-          const files = await fetchDirectoryContents(dir.name);
-          
-          // Filter for image files only
-          const imageFiles = files.filter(file => 
-            file.type === 'file' && 
-            /\.(jpg|jpeg|png|gif|webp)$/i.test(file.name)
-          );
-          
-          // Add each image to our collection
-          imageFiles.forEach(file => {
-            allImages.push({
-              id: imageId++,
-              image: `${githubBaseUrl}/${dir.name}/${file.name}`,
-              alt: `${dir.name} - ${file.name.split('.')[0].replace(/-/g, ' ')}`,
-              location: dir.name
-            });
-          });
-        } catch (dirError) {
-          console.error(`Error fetching files from ${dir.name}:`, dirError);
-        }
+      if (!response.ok) {
+        throw new Error(`Failed to fetch repository tree: ${response.status}`);
       }
+      
+      const data = await response.json();
+      
+      // Filter for image files in the interiors directory
+      const imageFiles = data.tree.filter(item => 
+        item.type === 'blob' && 
+        item.path.startsWith('public/images/interiors/') &&
+        /\.(jpg|jpeg|png|gif|webp)$/i.test(item.path)
+      );
+      
+      // Process each image file
+      imageFiles.forEach(file => {
+        // Extract location from path: public/images/interiors/[location]/filename.jpg
+        const pathParts = file.path.split('/');
+        const location = pathParts[3]; // The directory name after 'interiors/'
+        const filename = pathParts[pathParts.length - 1];
+        
+        allImages.push({
+          id: imageId++,
+          image: `${githubBaseUrl}/${file.path}`,
+          alt: `${location} - ${filename.split('.')[0].replace(/-/g, ' ')}`,
+          location: location
+        });
+      });
       
       setInteriorProjects(allImages);
       setError(null);
