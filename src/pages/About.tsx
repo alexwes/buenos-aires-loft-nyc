@@ -51,6 +51,7 @@ const About = () => {
             <div className="prose max-w-none text-foreground space-y-6 font-light leading-loose text-[11px]">
               <p>
 Based in New York City, our boutique interior design and art consultancy studio offers a thoughtful, bespoke approach that transforms everyday spaces into something truly special.
+
 We believe the interiors we inhabit—where we spend nearly 90% of our lives—should reflect who we are, inspire how we live, and elevate the everyday. Our work is guided by proportion, balance, and a deep appreciation for beauty and individuality. Whether crafting a home from the ground up or reimagining a single room, we create interiors with clean lines, intentional details, and eclectic sophistication. On the art side, we advise seasoned collectors in search of the perfect piece, as well as newcomers navigating the thrilling (and sometimes daunting) world of art collecting—always with warmth, taste, and discernment.
               </p>
 
